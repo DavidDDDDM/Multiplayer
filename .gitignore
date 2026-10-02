@@ -279,3 +279,4 @@ PersonalDefinitions.targets
 
 /Source/mpdbdist/
 out/
+/dist/
