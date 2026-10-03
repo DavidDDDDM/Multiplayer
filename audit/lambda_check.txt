@@ -1,0 +1,636 @@
+UNPARSED Source/Client/MultiplayerAPIBridge.cs:106  return SyncMethod.Lambda(parentType, parentMethod, lambdaOrdinal, parentArgs, (MethodType)parentMethodType);
+UNPARSED Source/Client/MultiplayerAPIBridge.cs:111  return SyncMethod.LambdaInGetter(parentType, parentMethod, lambdaOrdinal);
+UNPARSED Source/Client/MultiplayerAPIBridge.cs:126  return SyncDelegate.Lambda(parentType, parentMethod, lambdaOrdinal, parentArgs, (MethodType)parentMethodType);
+UNPARSED Source/Client/MultiplayerAPIBridge.cs:131  return SyncDelegate.LambdaInGetter(parentType, parentMethod, lambdaOrdinal);
+Source/Client/Syncing/Game/SyncDelegates.cs:23      SyncDelegate FloatMenuOptionProvider_CarryToBiosculpterPod.GetOptionsFor[0]  // Carry to biosculpter pod
+    -> <>c__DisplayClass9_1::<GetOptionsFor>b__0: CompBiosculpterPod.CanAcceptOnceCycleChosen, "CannotCarryToBiosculpterPod", ": ", op_Addition, "NoBiosculpterPod", op_Implicit, Messages.Message, FloatMenuContext.get_FirstSelectedPawn
+Source/Client/Syncing/Game/SyncDelegates.cs:24      SyncDelegate FloatMenuOptionProvider_CaptureEntity.GetOptionsFor[2]  // Capture entity
+    -> <>c__DisplayClass9_0::<GetOptionsFor>b__2: ContainmentUtility.SafeContainerExistsFor, "MessageNoRoomWithMinimumContainmentStrength", Entity.get_Label, op_Implicit, Messages.Message, =targetHolder, JobMaker.MakeJob, =count
+Source/Client/Syncing/Game/SyncDelegates.cs:38      SyncDelegate Command_SetPlantToGrow.ProcessInput[2]  // Set plant to grow
+    -> <>c__DisplayClass5_0::<ProcessInput>b__2: "-", String.Concat, op_Implicit, TutorSystem.AllowAction, get_Item, IPlantToGrowSettable.SetPlantDefToGrow, IPlantToGrowSettable.get_Cells, IntVec3>.GetEnumerator
+Source/Client/Syncing/Game/SyncDelegates.cs:39      SyncDelegate Building_Bed.SetBedOwnerTypeByInterface[0]  // Set bed owner type
+    -> <>c__DisplayClass55_0::<SetBedOwnerTypeByInterface>b__0: District>, Room>, Building_Bed>.GetEnumerator, Building_Bed>.get_Current, RegionAndRoomQuery.GetDistrict, District.get_Room, Room.get_TouchesMapEdge, Building_Bed.set_ForOwnerType
+Source/Client/Syncing/Game/SyncDelegates.cs:40      SyncDelegate ITab_Bills.FillTab[2]  // Add bill
+    -> <>c__DisplayClass10_3::<FillTab>b__2: ModsConfig.get_BiotechActive, ITab_Bills.get_SelTable, Thing.get_Map, MapPawns.get_FreeColonists, Pawn>, GenCollection.Any, Find.get_WindowStack, "RecipeRequiresMechanitor"
+Source/Client/Syncing/Game/SyncDelegates.cs:42      SyncDelegate CompLongRangeMineralScanner.CompGetGizmosExtra[1]  // Select mineral to scan for
+    -> <>c__DisplayClass7_0::<CompGetGizmosExtra>b__1: Find.get_Selector, Selector.get_SelectedObjects, List`1<object>.GetEnumerator, Enumerator<object>.get_Current, ThingCompUtility.TryGetComp, =targetMineable, Enumerator<object>.MoveNext, IDisposable.Dispose
+Source/Client/Syncing/Game/SyncDelegates.cs:43      SyncDelegate Building_PassengerShuttle.GetGizmos[2]  // Fill shuttle from cargo on map
+    -> <>c__DisplayClass28_0::<GetGizmos>b__2: Building_PassengerShuttle.ConsumeFuelFromInventory, Building_PassengerShuttle.get_RefuelableComp, CompRefuelable.Refuel
+Source/Client/Syncing/Game/SyncDelegates.cs:44      SyncMethod CompFlickable.CompGetGizmosExtra[1]  // Toggle flick designation
+    -> <CompGetGizmosExtra>d__20::<CompGetGizmosExtra>b__20_1: =wantSwitchOn, FlickUtility.UpdateFlickDesignation
+Source/Client/Syncing/Game/SyncDelegates.cs:45      SyncMethod Pawn_PlayerSettings.GetGizmos[1]  // Toggle release animals
+    -> <GetGizmos>d__36::<GetGizmos>b__36_1: =animalsReleased, PawnUtility.SpawnedMasteredPawns, Pawn>.GetEnumerator, Pawn>.get_Current, Pawn_CallTracker.Notify_Released, Pawn_JobTracker.EndCurrentJob, IEnumerator.MoveNext, IDisposable.Dispose
+Source/Client/Syncing/Game/SyncDelegates.cs:46      SyncMethod Pawn_PlayerSettings.GetGizmos[2]  // Force animals to attack specific target
+    -> <GetGizmos>d__36::<GetGizmos>b__36_2: LocalTargetInfo.get_Cell, Thing.get_Position, IntVec3.InHorDistOf, "MessageNotInRangeOfMaster", op_Implicit, Messages.Message, PawnUtility.SpawnedMasteredPawns, Pawn>.GetEnumerator
+Source/Client/Syncing/Game/SyncDelegates.cs:47      SyncMethod Building_TurretGun.GetGizmos[2]  // Toggle turret hold fire
+    -> <GetGizmos>d__71::<GetGizmos>b__71_2: =holdFire, Building_TurretGun.ResetForcedTarget
+Source/Client/Syncing/Game/SyncDelegates.cs:48      SyncMethod Building_Trap.GetGizmos[1]  // Toggle trap auto-rearm
+    -> <GetGizmos>d__31::<GetGizmos>b__31_1: =autoRearm
+Source/Client/Syncing/Game/SyncDelegates.cs:49      SyncMethod Building_Door.GetGizmos[1]  // Toggle door hold open
+    -> <GetGizmos>d__79::<GetGizmos>b__79_1: =holdOpenInt
+Source/Client/Syncing/Game/SyncDelegates.cs:50      SyncMethod Zone_Growing.GetGizmos[1]  // Toggle zone allow sow
+    -> <GetZoneAddGizmos>d__20::<GetGizmos>b__19_1: =allowSow
+Source/Client/Syncing/Game/SyncDelegates.cs:51      SyncMethod Zone_Growing.GetGizmos[3]  // Toggle zone allow cut
+    -> <GetZoneAddGizmos>d__20::<GetGizmos>b__19_3: =allowCut
+Source/Client/Syncing/Game/SyncDelegates.cs:52      SyncMethod Zone_Fishing.GetGizmos[1]  // Toggle zone allow fishing
+    -> <GetZoneAddGizmos>d__47::<GetGizmos>b__52_1: =allowed
+Source/Client/Syncing/Game/SyncDelegates.cs:53      SyncDelegate ITab_Fishing.FillTab[0]  // Changes repeat mode fishing zone
+    -> <>c__DisplayClass9_1::<FillTab>b__0: =targetCount, =repeatCount, =pauseWhenSatisfied, =unpauseAtCount, =repeatMode, Zone_Fishing.RecheckPausedDueToResourceCount
+Source/Client/Syncing/Game/SyncDelegates.cs:55      SyncMethod PriorityWork.GetGizmos[0]  // Clear prioritized work
+    -> <GetGizmos>d__17::<GetGizmos>b__17_0: PriorityWork.ClearPrioritizedWorkAndJobQueue, Pawn.get_CurJob, Pawn_JobTracker.IsCurrentJobPlayerInterruptible, Pawn_JobTracker.EndCurrentJob
+Source/Client/Syncing/Game/SyncDelegates.cs:56      SyncMethod Building_TurretGun.GetGizmos[1]  // Reset forced target
+    -> <GetGizmos>d__71::<GetGizmos>b__71_1: Building_TurretGun.ResetForcedTarget, SoundStarter.PlayOneShotOnCamera
+Source/Client/Syncing/Game/SyncDelegates.cs:57      SyncMethod UnfinishedThing.GetGizmos[0]  // Cancel unfinished thing
+    -> <SpecialDisplayStats>d__32::<GetGizmos>b__28_0: Thing.Destroy
+Source/Client/Syncing/Game/SyncDelegates.cs:58  DEV SyncMethod UnfinishedThing.GetGizmos[1]  // Dev complete
+    -> <SpecialDisplayStats>d__32::<GetGizmos>b__28_1: =debugCompleted
+Source/Client/Syncing/Game/SyncDelegates.cs:60      SyncDelegate Designator.get_RightClickFloatMenuOptions[0]  // Designate all
+    -> <>c__DisplayClass37_0::<get_RightClickFloatMenuOptions>b__0: get_Item, GridsUtility.Fogged, Designator.CanDesignateThing, AcceptanceReport.get_Accepted, Designator.DesignateThing, Thing>.get_Count
+Source/Client/Syncing/Game/SyncDelegates.cs:62      SyncMethod Designator.get_RightClickFloatMenuOptions[1]  // Remove all designations
+    -> <get_RightClickFloatMenuOptions>d__37::<get_RightClickFloatMenuOptions>b__37_1: Designation>.get_Count, Designator.get_Map, get_Item, DesignationManager.RemoveDesignation
+Source/Client/Syncing/Game/SyncDelegates.cs:64      SyncDelegate SettleInEmptyTileUtility.SetupCamp[0]  // 
+    -> <>c__DisplayClass4_0::<SetupCamp>b__0: Action, =<>9__1, "GeneratingMap", Exception>, LongEventHandler.QueueLongEvent
+Source/Client/Syncing/Game/SyncDelegates.cs:66      SyncDelegate Caravan.GetRefuelGizmo[2]  // Fill shuttle from cargo on world map
+    -> <>c__DisplayClass125_0::<GetRefuelGizmo>b__2: CaravanShuttleUtility.ConsumeFuelFromCaravanInventory, Caravan.get_Shuttle, Building_PassengerShuttle.get_RefuelableComp, CompRefuelable.Refuel
+Source/Client/Syncing/Game/SyncDelegates.cs:68      SyncDelegate CaravanAbandonOrBanishUtility.TryAbandonOrBanishViaInterface[1]  // Abandon caravan thing
+    -> <>c__DisplayClass0_0::<TryAbandonOrBanishViaInterface>b__1: CaravanInventoryUtility.GetOwnerOf, "Could not find owner of ", Object.ToString, String.Concat, Log.Error, CaravanUtility.GetTileCurrentlyOver, Thing.Notify_AbandonedAtTile, ThingOwner.Remove
+Source/Client/Syncing/Game/SyncDelegates.cs:69      SyncDelegate CaravanAbandonOrBanishUtility.TryAbandonOrBanishViaInterface[0]  // Abandon caravan transferable
+    -> <>c__DisplayClass0_0::<TryAbandonOrBanishViaInterface>b__0: Caravan.IsOwner
+    -> <>c__DisplayClass1_0::<TryAbandonOrBanishViaInterface>b__0: get_Item, CaravanInventoryUtility.GetOwnerOf, "Could not find owner of ", Object.ToString, String.Concat, Log.Error, CaravanUtility.GetTileCurrentlyOver, Thing.Notify_AbandonedAtTile
+Source/Client/Syncing/Game/SyncDelegates.cs:71      SyncDelegate CaravanAbandonOrBanishUtility.TryAbandonSpecificCountViaInterface[0]  // Abandon thing specific count
+    -> <>c__DisplayClass2_0::<TryAbandonSpecificCountViaInterface>b__0: CaravanInventoryUtility.GetOwnerOf, "Could not find owner of ", Object.ToString, String.Concat, Log.Error, CaravanUtility.GetTileCurrentlyOver, Thing.Notify_AbandonedAtTile, ThingOwner.Remove
+    -> <>c__DisplayClass3_0::<TryAbandonSpecificCountViaInterface>b__0: get_Item, CaravanInventoryUtility.GetOwnerOf, "Could not find owner of ", Object.ToString, String.Concat, Log.Error, CaravanUtility.GetTileCurrentlyOver, Thing.Notify_AbandonedAtTile
+Source/Client/Syncing/Game/SyncDelegates.cs:72      SyncDelegate CaravanAbandonOrBanishUtility.TryAbandonSpecificCountViaInterface[0]  // Abandon transferable specific count
+    -> <>c__DisplayClass2_0::<TryAbandonSpecificCountViaInterface>b__0: CaravanInventoryUtility.GetOwnerOf, "Could not find owner of ", Object.ToString, String.Concat, Log.Error, CaravanUtility.GetTileCurrentlyOver, Thing.Notify_AbandonedAtTile, ThingOwner.Remove
+    -> <>c__DisplayClass3_0::<TryAbandonSpecificCountViaInterface>b__0: get_Item, CaravanInventoryUtility.GetOwnerOf, "Could not find owner of ", Object.ToString, String.Concat, Log.Error, CaravanUtility.GetTileCurrentlyOver, Thing.Notify_AbandonedAtTile
+Source/Client/Syncing/Game/SyncDelegates.cs:74      SyncDelegate CaravanVisitUtility.TradeCommand[0]  // Caravan trade with settlement
+    -> <>c__DisplayClass2_0::<TradeCommand>b__0: CaravanVisitUtility.SettlementVisitedNow, Settlement.get_CanTradeNow, Find.get_WindowStack, Dialog_Trade, WindowStack.Add, Settlement.get_Goods, Enumerable.OfType, "LetterRelatedPawnsTradingWithSettlement"
+Source/Client/Syncing/Game/SyncDelegates.cs:75      SyncDelegate FactionGiftUtility.OfferGiftsCommand[0]  // Caravan offer gifts
+    -> <>c__DisplayClass1_0::<OfferGiftsCommand>b__0: BestCaravanPawnUtility.FindBestNegotiator, Find.get_WindowStack, Dialog_Trade, WindowStack.Add
+Source/Client/Syncing/Game/SyncDelegates.cs:77      SyncDelegate Building_Bed.GetBedRestFloatMenuOption[0]  // Use medical bed
+    -> <>c__DisplayClass58_0::<GetBedRestFloatMenuOption>b__0: Building_Bed.get_ForPrisoners, Building_Bed.get_Medical, op_Implicit, Building_Bed.get_SleepingSlotsCount, ReservationUtility.CanReserveAndReach, Pawn.get_CurJobDef, Pawn.get_CurJob, Job.GetTarget
+Source/Client/Syncing/Game/SyncDelegates.cs:79      SyncMethod CompRefuelable.CompGetGizmosExtra[1]  // Toggle Auto-refuel
+    -> <SpecialDisplayStats>d__41::<CompGetGizmosExtra>b__51_1: =allowAutoRefuel
+Source/Client/Syncing/Game/SyncDelegates.cs:80  DEV SyncMethod CompRefuelable.CompGetGizmosExtra[2]  // Set fuel to 0
+    -> <SpecialDisplayStats>d__41::<CompGetGizmosExtra>b__51_2: =fuel, "Refueled", ThingWithComps.BroadcastCompSignal
+Source/Client/Syncing/Game/SyncDelegates.cs:81  DEV SyncMethod CompRefuelable.CompGetGizmosExtra[3]  // Set fuel to 0.1
+    -> <SpecialDisplayStats>d__41::<CompGetGizmosExtra>b__51_3: =fuel, "Refueled", ThingWithComps.BroadcastCompSignal
+Source/Client/Syncing/Game/SyncDelegates.cs:82  DEV SyncMethod CompRefuelable.CompGetGizmosExtra[4]  // -20% fuel
+    -> <SpecialDisplayStats>d__41::<CompGetGizmosExtra>b__51_4: CompRefuelable.get_Props, CompRefuelable.ConsumeFuel
+Source/Client/Syncing/Game/SyncDelegates.cs:83  DEV SyncMethod CompRefuelable.CompGetGizmosExtra[5]  // Set fuel to max
+    -> <SpecialDisplayStats>d__41::<CompGetGizmosExtra>b__51_5: CompRefuelable.get_Props, =fuel, "Refueled", ThingWithComps.BroadcastCompSignal
+Source/Client/Syncing/Game/SyncDelegates.cs:85      SyncMethod CompShuttle.CompGetGizmosExtra[1]  // Toggle autoload
+    -> <get_RequiredPawns>d__45::<CompGetGizmosExtra>b__54_1: =autoload, CompShuttle.get_Transporter, CompTransporter.get_LoadingInProgressOrReadyToLaunch, Gen.YieldSingle, TransporterUtility.InitiateLoading, CompShuttle.CheckAutoload
+Source/Client/Syncing/Game/SyncDelegates.cs:89      SyncMethod MonumentMarker.GetGizmos[1]  // Build monument quest - monument marker: cancel/remove marker
+    -> <GetGizmos>d__29::<GetGizmos>b__29_1: "MonumentCancelled", "SUBJECT", NamedArgumentUtility.Named, QuestUtility.SendQuestTargetSignals, MonumentMarker.RemovePossiblyRelatedBlueprints, MinifyUtility.Uninstall
+Source/Client/Syncing/Game/SyncDelegates.cs:90  DEV SyncMethod MonumentMarker.GetGizmos[4]  // Build monument quest - monument marker: dev build all
+    -> <GetGizmos>d__29::<GetGizmos>b__29_4: MonumentMarker.DebugBuildAll, SoundStarter.PlayOneShotOnCamera
+Source/Client/Syncing/Game/SyncDelegates.cs:91  DEV SyncMethod MonumentMarker.GetGizmos[5]  // Build monument quest - monument marker: dev disallowed building ticks +6 hours
+    -> <GetGizmos>d__29::<GetGizmos>b__29_5: =ticksSinceDisallowedBuilding
+Source/Client/Syncing/Game/SyncDelegates.cs:93      SyncDelegate CompPlantable.BeginTargeting[3]  // Select cell to plant in with confirmation
+    -> <>c__DisplayClass9_0::<BeginTargeting>b__3: LocalTargetInfo.get_Cell, IntVec3>.Add
+Source/Client/Syncing/Game/SyncDelegates.cs:94      SyncMethod CompPlantable.CompGetGizmosExtra[0]  // Cancel planting all
+    -> <CompGetGizmosExtra>d__8::<CompGetGizmosExtra>b__8_0: IntVec3>.Clear
+Source/Client/Syncing/Game/SyncDelegates.cs:96      SyncMethod Pawn_ConnectionsTracker.GetGizmos[3]  // Return to healing pod
+    -> <GetGizmos>d__10::<GetGizmos>b__10_3: =returnToHealingPod
+Source/Client/Syncing/Game/SyncDelegates.cs:97  DEV SyncMethod CompTreeConnection.CompGetGizmosExtra[1]  // Spawn dryad
+    -> <SpecialDisplayStats>d__79::<CompGetGizmosExtra>b__74_1: CompTreeConnection.SpawnDryad
+Source/Client/Syncing/Game/SyncDelegates.cs:98  DEV SyncMethod CompTreeConnection.CompGetGizmosExtra[2]  // Increase connection strength by 10%
+    -> <SpecialDisplayStats>d__79::<CompGetGizmosExtra>b__74_2: CompTreeConnection.get_ConnectionStrength, CompTreeConnection.set_ConnectionStrength
+Source/Client/Syncing/Game/SyncDelegates.cs:99  DEV SyncMethod CompTreeConnection.CompGetGizmosExtra[3]  // Decrease connection strength by 10%
+    -> <SpecialDisplayStats>d__79::<CompGetGizmosExtra>b__74_3: CompTreeConnection.get_ConnectionStrength, CompTreeConnection.set_ConnectionStrength
+Source/Client/Syncing/Game/SyncDelegates.cs:101      SyncMethod CompNeuralSupercharger.CompGetGizmosExtra[1]  // Neural supercharger: allow temporary pawns (guests) to use
+    -> <CompGetGizmosExtra>d__16::<CompGetGizmosExtra>b__16_1: =allowGuests
+Source/Client/Syncing/Game/SyncDelegates.cs:103  DEV SyncMethod CompPilotConsole.CompGetGizmosExtra[1]  // Dev launch instantly
+    -> <CompGetGizmosExtra>d__15::<CompGetGizmosExtra>b__15_1: LaunchInfo, =quality, =doNegativeOutcome, =launchInfo, CompPilotConsole.StartChoosingDestination_NewTemp
+Source/Client/Syncing/Game/SyncDelegates.cs:104  DEV SyncMethod CompPilotConsole.CompGetGizmosExtra[2]  // Dev reset cooldown
+    -> <CompGetGizmosExtra>d__15::<CompGetGizmosExtra>b__15_2: =cooldownCompleteTick
+Source/Client/Syncing/Game/SyncDelegates.cs:105      SyncDelegate CompPilotConsole.StartChoosingDestination_NewTemp[4]  // Cancel gravship tile picker
+    -> <>c__DisplayClass14_0::<StartChoosingDestination_NewTemp>b__4: op_Implicit, CameraJumper.TryJump
+Source/Client/Syncing/Game/SyncDelegates.cs:106      SyncDelegate CompPilotConsole.StartChoosingDestination_NewTemp[5]  // Confirm gravship landing tile
+    -> <>c__DisplayClass14_1::<StartChoosingDestination_NewTemp>b__5: Thing.get_Map, Building_GravEngine.get_ValidSubstructure, WorldComponent_GravshipController.DestroyTreesAroundSubstructure, Find.get_World, =wantedMode, Building_GravEngine.ConsumeFuel, Find.get_GravshipController, WorldComponent_GravshipController.InitiateTakeoff
+Source/Client/Syncing/Game/SyncDelegates.cs:107      SyncDelegate RitualOutcomeEffectWorker_GravshipLaunch.Apply[0]  // Confirm gravship prelaunch dialog
+    -> <>c__DisplayClass2_0::<Apply>b__0: CompPilotConsole.StartChoosingDestination_NewTemp
+Source/Client/Syncing/Game/SyncDelegates.cs:108      SyncDelegate GravshipUtility.PreLaunchConfirmation[4]  // Cancel gravship prelaunch dialog
+    -> <>c::<PreLaunchConfirmation>b__17_4: 
+Source/Client/Syncing/Game/SyncDelegates.cs:111      SyncMethod CompBiosculpterPod.CompGetGizmosExtra[1]  // Interrupt cycle (eject contents)
+    -> <CompGetGizmosExtra>d__91::<CompGetGizmosExtra>b__91_1: CompBiosculpterPod.EjectContents
+Source/Client/Syncing/Game/SyncDelegates.cs:112      SyncMethod CompBiosculpterPod.CompGetGizmosExtra[3]  // Toggle auto load nutrition
+    -> <CompGetGizmosExtra>d__91::<CompGetGizmosExtra>b__91_3: =autoLoadNutrition
+Source/Client/Syncing/Game/SyncDelegates.cs:113      SyncMethod CompBiosculpterPod.CompGetGizmosExtra[5]  // Toggle auto age reversal
+    -> <CompGetGizmosExtra>d__91::<CompGetGizmosExtra>b__91_5: =autoAgeReversal
+Source/Client/Syncing/Game/SyncDelegates.cs:114  DEV SyncMethod CompBiosculpterPod.CompGetGizmosExtra[6]  // Dev complete cycle
+    -> <CompGetGizmosExtra>d__91::<CompGetGizmosExtra>b__91_6: =currentCycleTicksRemaining
+Source/Client/Syncing/Game/SyncDelegates.cs:115  DEV SyncMethod CompBiosculpterPod.CompGetGizmosExtra[7]  // Dev advance by 1 day
+    -> <CompGetGizmosExtra>d__91::<CompGetGizmosExtra>b__91_7: =currentCycleTicksRemaining
+Source/Client/Syncing/Game/SyncDelegates.cs:116  DEV SyncMethod CompBiosculpterPod.CompGetGizmosExtra[8]  // Dev complete biotuner timer
+    -> <CompGetGizmosExtra>d__91::<CompGetGizmosExtra>b__91_8: =biotunedCountdownTicks
+Source/Client/Syncing/Game/SyncDelegates.cs:117  DEV SyncMethod CompBiosculpterPod.CompGetGizmosExtra[9]  // Dev fill nutrition and ingredients
+    -> <CompGetGizmosExtra>d__91::<CompGetGizmosExtra>b__91_9: =liquifiedNutrition, =devFillPodLatch
+Source/Client/Syncing/Game/SyncDelegates.cs:119      SyncDelegate ITab_Pawn_Visitor.DoPrisonerTab[5]  // Select target prisoner ideology
+    -> <>c__DisplayClass8_1::<DoPrisonerTab>b__5: ITab.get_SelPawn, =ideoForConversion
+Source/Client/Syncing/Game/SyncDelegates.cs:120      SyncDelegate ITab_Pawn_Visitor.DoSlaveTab[6]  // Cancel setting slave mode to execution
+    -> <>c__DisplayClass7_0::<DoSlaveTab>b__6: ITab.get_SelPawn, =slaveInteractionMode
+Source/Client/Syncing/Game/SyncDelegates.cs:122      SyncMethod ShipJob_Wait.GetJobGizmos[0]  // Dismiss (unload) shuttle
+    -> <GetJobGizmos>d__12::<GetJobGizmos>b__12_0: TransportShip.ForceJob, TransportShip.AddJob
+Source/Client/Syncing/Game/SyncDelegates.cs:123      SyncMethod ShipJob_Wait.GetJobGizmos[1]  // Send loaded shuttle
+    -> <GetJobGizmos>d__12::<GetJobGizmos>b__12_1: TransportShip.ForceJob
+Source/Client/Syncing/Game/SyncDelegates.cs:125      SyncMethod Building_PodLauncher.GetGizmos[0]  // Pod launcher gizmo: Build pod
+    -> <GetGizmos>d__2::<GetGizmos>b__2_0: FuelingPortUtility.GetFuelingPortCell, Thing.get_Map, Faction.get_OfPlayer, GenConstruct.PlaceBlueprintForBuild
+Source/Client/Syncing/Game/SyncDelegates.cs:128      SyncMethod Pawn_CarryTracker.GetGizmos[0]  // 
+    -> <GetGizmos>d__22::<GetGizmos>b__22_0: Thing.get_Position, Pawn_CarryTracker.TryDropCarriedThing
+Source/Client/Syncing/Game/SyncDelegates.cs:130  DEV SyncDelegate Pawn_CarryTracker.GetGizmos[1]  // Trigger dissolution event (CompDissolution)
+    -> <>c__DisplayClass22_0::<GetGizmos>b__1: CompDissolution.TriggerDissolutionEvent
+Source/Client/Syncing/Game/SyncDelegates.cs:133  DEV SyncMethod CompSpawner.CompGetGizmosExtra[0]  // Spawn thing
+    -> <CompGetGizmosExtra>d__14::<CompGetGizmosExtra>b__14_0: CompSpawner.ResetCountdown, CompSpawner.TryDoSpawn
+Source/Client/Syncing/Game/SyncDelegates.cs:134  DEV SyncMethod CompSpawnerHives.CompGetGizmosExtra[0]  // Reproduce
+    -> <CompGetGizmosExtra>d__16::<CompGetGizmosExtra>b__16_0: CompSpawnerHives.TrySpawnChildHive
+Source/Client/Syncing/Game/SyncDelegates.cs:135  DEV SyncMethod CompSpawnerItems.CompGetGizmosExtra[0]  // Spawn items
+    -> <CompGetGizmosExtra>d__5::<CompGetGizmosExtra>b__5_0: CompSpawnerItems.SpawnItems
+Source/Client/Syncing/Game/SyncDelegates.cs:136  DEV SyncMethod CompSpawnerPawn.CompGetGizmosExtra[0]  // Spawn pawn
+    -> <CompGetGizmosExtra>d__33::<CompGetGizmosExtra>b__33_0: CompSpawnerPawn.TrySpawnPawn
+Source/Client/Syncing/Game/SyncDelegates.cs:138  DEV SyncMethod CompSendSignalOnCountdown.CompGetGizmosExtra[0]  // 
+    -> <CompGetGizmosExtra>d__7::<CompGetGizmosExtra>b__7_0: Find.get_SignalManager, "SUBJECT", NamedArgumentUtility.Named, Signal, SignalManager.SendSignal, Thing.get_Position, Thing.get_Map, TargetInfo
+Source/Client/Syncing/Game/SyncDelegates.cs:141  DEV SyncMethod CompRechargeable.CompGetGizmosExtra[0]  // Recharge
+    -> <CompGetGizmosExtra>d__11::<CompGetGizmosExtra>b__11_0: CompRechargeable.get_Props, Thing.get_Position, Thing.get_Map, TargetInfo, op_Implicit, SoundStarter.PlayOneShot, =ticksUntilCharged
+Source/Client/Syncing/Game/SyncDelegates.cs:145      SyncDelegate Ability.QueueCastingJob[0]  // 
+    -> <>c__DisplayClass83_0::<QueueCastingJob>b__0: =needToRecacheWarmupMotes, Ability.GetJob, JobTag>, Pawn_JobTracker.TryTakeOrderedJob
+    -> <>c__DisplayClass85_0::<QueueCastingJob>b__0: CaravanUtility.IsCaravanMember, JobMaker.MakeJob, Ability.get_verb, =verbToUse, =globalTarget, =ability, =needToRecacheWarmupMotes, JobTag>
+Source/Client/Syncing/Game/SyncDelegates.cs:146      SyncDelegate Ability.QueueCastingJob[0]  // 
+    -> <>c__DisplayClass83_0::<QueueCastingJob>b__0: =needToRecacheWarmupMotes, Ability.GetJob, JobTag>, Pawn_JobTracker.TryTakeOrderedJob
+    -> <>c__DisplayClass85_0::<QueueCastingJob>b__0: CaravanUtility.IsCaravanMember, JobMaker.MakeJob, Ability.get_verb, =verbToUse, =globalTarget, =ability, =needToRecacheWarmupMotes, JobTag>
+Source/Client/Syncing/Game/SyncDelegates.cs:148  DEV SyncMethod Ability.GetGizmos[0]  // Reset cooldown
+    -> <GetGizmosExtra>d__103::<GetGizmos>b__102_0: =inCooldown, =charges
+Source/Client/Syncing/Game/SyncDelegates.cs:151      SyncDelegate Dialog_StyleSelection.DoWindowContents[0]  // Remove style
+    -> <>c__DisplayClass10_0::<DoWindowContents>b__0: Find.get_IdeoManager, StyleCategoryDef>.Remove, Dialog_StyleSelection.ClearCaches
+Source/Client/Syncing/Game/SyncDelegates.cs:152      SyncDelegate Dialog_StyleSelection.DoWindowContents[1]  // Replace style
+    -> <>c__DisplayClass10_1::<DoWindowContents>b__1: Find.get_IdeoManager, GenCollection.Replace, Dialog_StyleSelection.ClearCaches
+Source/Client/Syncing/Game/SyncDelegates.cs:153      SyncDelegate Dialog_StyleSelection.DoWindowContents[2]  // Add style
+    -> <>c__DisplayClass10_2::<DoWindowContents>b__2: Find.get_IdeoManager, StyleCategoryDef>.Add, Dialog_StyleSelection.ClearCaches
+Source/Client/Syncing/Game/SyncDelegates.cs:155      SyncDelegate CompInteractableRocketswarmLauncher.TargetLocation[0]  // 
+    -> <>c__DisplayClass4_0::<TargetLocation>b__0: CompInteractableRocketswarmLauncher.get_ParentGun, Building_Turret.get_ForcedTarget, LocalTargetInfo.get_IsValid, op_Implicit, JobMaker.MakeJob, JobTag>, Pawn_JobTracker.TryTakeOrderedJob
+Source/Client/Syncing/Game/SyncDelegates.cs:156  DEV SyncDelegate CompAtomizer.CompGetGizmosExtra[3]  // Set next atomization
+    -> <>c__DisplayClass22_0::<CompGetGizmosExtra>b__3: CompAtomizer.get_TicksPerAtomize, =ticksAtomized
+Source/Client/Syncing/Game/SyncDelegates.cs:157      SyncDelegate CompBandNode.CompGetGizmosExtra[7]  // Select pawn to tune to
+    -> <>c__DisplayClass21_1::<CompGetGizmosExtra>b__7: CompBandNode>.GetEnumerator, CompBandNode>.get_Current, CompBandNode.TuneTo, IEnumerator.MoveNext, IDisposable.Dispose
+Source/Client/Syncing/Game/SyncDelegates.cs:158  DEV SyncDelegate CompDissolution.CompGetGizmosExtra[4]  // Set next dissolve time
+    -> <>c__DisplayClass28_0::<CompGetGizmosExtra>b__4: CompDissolution.get_DissolutionIntervalTicks, =dissolveTicks
+Source/Client/Syncing/Game/SyncDelegates.cs:159  DEV SyncDelegate CompPollutionPump.CompGetGizmosExtra[1]  // Set next pollution cycle
+    -> <>c__DisplayClass12_0::<CompGetGizmosExtra>b__1: =ticksUntilPump
+Source/Client/Syncing/Game/SyncDelegates.cs:160  DEV SyncDelegate CompToxifier.CompGetGizmosExtra[3]  // Set next pollution time
+    -> <>c__DisplayClass11_0::<CompGetGizmosExtra>b__3: CompToxifier.get_Props, =pollutingProgressTicks
+Source/Client/Syncing/Game/SyncDelegates.cs:161  DEV SyncDelegate Gene_Deathrest.GetGizmos[5]  // Set capacity
+    -> <>c__DisplayClass58_0::<GetGizmos>b__5: Gene_Deathrest.OffsetCapacity
+Source/Client/Syncing/Game/SyncDelegates.cs:164  DEV SyncDelegate MechanitorUtility.GetMechGizmos[2]  // Recruit
+    -> <>c__DisplayClass21_0::<GetMechGizmos>b__2: Faction.get_OfPlayer, Thing.SetFaction
+Source/Client/Syncing/Game/SyncDelegates.cs:165  DEV SyncDelegate MechanitorUtility.GetMechGizmos[3]  // Kill
+    -> <>c__DisplayClass21_0::<GetMechGizmos>b__3: Thing.Kill
+Source/Client/Syncing/Game/SyncDelegates.cs:167      SyncDelegate Designator_MechControlGroup.ProcessInput[1]  // Assign to group
+    -> <>c__DisplayClass9_0::<ProcessInput>b__1: Find.get_Selector, Selector.get_SelectedPawns, Pawn>.GetEnumerator, Pawn>.get_Current, Designator_MechControlGroup.CanAssignToControlGroup, MechanitorControlGroup.Assign, Pawn>.MoveNext, IDisposable.Dispose
+Source/Client/Syncing/Game/SyncDelegates.cs:168      SyncDelegate MechanitorControlGroupGizmo.GetWorkModeOptions[1]  // Set work mode for group
+    -> <>c__DisplayClass16_1::<GetWorkModeOptions>b__1: MechanitorControlGroup.SetWorkMode
+Source/Client/Syncing/Game/SyncDelegates.cs:169      SyncDelegate PawnColumnWorker_ControlGroup.Button_GenerateMenu[0]  // Assign to group
+    -> <>c__DisplayClass3_1::<Button_GenerateMenu>b__0: MechanitorControlGroup.Assign
+Source/Client/Syncing/Game/SyncDelegates.cs:170      SyncDelegate MainTabWindow_Mechs.DoWindowContents[0]  // Change mech color
+    -> <>c::<DoWindowContents>b__8_0: Find.get_FactionManager, FactionManager.get_OfPlayer, Faction.set_AllegianceColor, MechanitorUtility.MechsInPlayerFaction, Pawn>.GetEnumerator, Pawn>.get_Current, PortraitsCache.SetDirty, IEnumerator.MoveNext
+Source/Client/Syncing/Game/SyncDelegates.cs:176  DEV SyncDelegate CompOverseerSubject.CompGetGizmosExtra[2]  // Assign to overseer
+    -> <>c__DisplayClass23_0::<CompGetGizmosExtra>b__2: Find.get_Selector, Selector.get_SelectedPawns, bool>, Enumerable.Where, Pawn>.GetEnumerator, Pawn>.get_Current, MechanitorUtility.GetOverseer, Pawn_RelationsTracker.RemoveDirectRelation
+Source/Client/Syncing/Game/SyncDelegates.cs:182      SyncDelegate CompGlower.CompGetGizmosExtra[2]  // Paste color
+    -> <>c__DisplayClass34_1::<CompGetGizmosExtra>b__2: SoundStarter.PlayOneShotOnCamera, CompGlower.get_GlowColor, ColorInt.SetHueSaturation, CompGlower.set_GlowColor, CompGlower>.GetEnumerator, CompGlower>.get_Current, CompGlower>.MoveNext, IDisposable.Dispose
+Source/Client/Syncing/Game/SyncDelegates.cs:183      SyncDelegate CompGlower.CompGetGizmosExtra[3]  // Toggle darklight
+    -> <>c__DisplayClass34_2::<CompGetGizmosExtra>b__3: SoundStarter.PlayOneShotOnCamera, CompGlower.SetGlowColorInternal, ColorInt, CompGlower.set_GlowColor, CompGlower.ExtraSelectedGlowers, CompGlower>.GetEnumerator, CompGlower>.get_Current, CompGlower>.MoveNext
+Source/Client/Syncing/Game/SyncDelegates.cs:186      SyncDelegate StorageGroupUtility.StorageGroupMemberGizmos[2]  // Unlink
+    -> <>c__DisplayClass5_0::<StorageGroupMemberGizmos>b__2: IStorageGroupMember.get_Group, StorageGroup.GetStoreSettings, StorageGroup.RemoveMember, IStorageGroupMember.set_Group, StorageSettings.CopyFrom, IStorageGroupMember>.get_Count, "SettingsUnlinkedFor", op_Implicit
+Source/Client/Syncing/Game/SyncDelegates.cs:187      SyncDelegate StorageGroupUtility.StorageGroupMemberGizmos[0]  // Link
+    -> <>c__DisplayClass5_0::<StorageGroupMemberGizmos>b__0: get_Item, IStorageGroupMember.get_Group, IStorageGroupMember.get_Map, StorageGroupManager.NewGroup, StorageGroup.InitFrom, IStorageGroupMember>.GetEnumerator, IStorageGroupMember>.get_Current, StorageGroupUtility.SetStorageGroup
+Source/Client/Syncing/Game/SyncDelegates.cs:197      SyncMethod HumanEmbryo.GetGizmos[2]  // Cancel
+    -> <GetGizmos>d__11::<GetGizmos>b__11_2: HumanEmbryo.ImplantPawnValid, HumanEmbryo.ImplantVatValid, =implantTarget
+Source/Client/Syncing/Game/SyncDelegates.cs:198      SyncDelegate HumanEmbryo.CanImplantFloatOption[1]  // Order operation and set the implant target field
+    -> <>c__DisplayClass17_0::<CanImplantFloatOption>b__1: Thing>, Thing>.Add, HealthCardUtility.CreateSurgeryBill, =implantTarget
+Source/Client/Syncing/Game/SyncDelegates.cs:199      SyncMethod HumanOvum.GetGizmos[1]  // Cancel
+    -> <GetGizmos>d__3::<GetGizmos>b__3_1: Pawn_JobTracker.EndCurrentJob
+Source/Client/Syncing/Game/SyncDelegates.cs:202      SyncDelegate Xenogerm.SetTargetPawn[1]  // Select the target - sets up operation (which was synced) and some extra data (which wasn't)
+    -> <>c__DisplayClass11_0::<SetTargetPawn>b__1: Pawn.get_BillStack, BillStack.get_Bills, Bill>, =<>9__2, GenCollection.FirstOrDefault, BillStack.Delete, HealthCardUtility.CreateSurgeryBill, =xenogerm
+Source/Client/Syncing/Game/SyncDelegates.cs:203      SyncMethod Xenogerm.GetGizmos[2]  // 
+    -> <GetGizmos>d__16::<GetGizmos>b__16_2: Pawn.get_BillStack, BillStack.get_Bills, Bill>, GenCollection.FirstOrDefault, BillStack.Delete
+Source/Client/Syncing/Game/SyncDelegates.cs:208      SyncDelegate Building_GeneExtractor.SelectPawn[0]  // 
+    -> <>c__DisplayClass36_0::<SelectPawn>b__0: Building_GeneExtractor.<>n__0
+Source/Client/Syncing/Game/SyncDelegates.cs:212      SyncDelegate Dialog_CreateXenogerm.DrawGenepack[8]  // Eject from container
+    -> <>c__DisplayClass21_0::<DrawGenepack>b__8: Building_GeneAssembler.GetGeneBankHoldingPack, Thing.get_Position, Thing.get_InteractionCell, Thing.get_Map, ThingOwner.TryDrop, Genepack>.Contains, Genepack>.Remove, GeneDef>.Clear
+Source/Client/Syncing/Game/SyncDelegates.cs:214  DEV SyncDelegate Pawn.GetGizmos[5]  // Set growth tier
+    -> <>c__DisplayClass346_0::<GetGizmos>b__5: =growthPoints
+Source/Client/Syncing/Game/SyncDelegates.cs:217  DEV SyncDelegate Building_HoldingPlatform.GetGizmos[1]  // Set escape tick
+    -> <>c__DisplayClass71_0::<GetGizmos>b__1: Find.get_TickManager, TickManager.get_TicksGame, =debugEscapeTick
+Source/Client/Syncing/Game/SyncDelegates.cs:218  DEV SyncMethod CompActivity.CompGetGizmosExtra[0]  // Dev activity -5%
+    -> <CompGetGizmosExtra>d__28::<CompGetGizmosExtra>b__28_0: CompActivity.AdjustActivity
+Source/Client/Syncing/Game/SyncDelegates.cs:219  DEV SyncMethod CompActivity.CompGetGizmosExtra[1]  // Dev activity +5%
+    -> <CompGetGizmosExtra>d__28::<CompGetGizmosExtra>b__28_1: CompActivity.AdjustActivity
+Source/Client/Syncing/Game/SyncDelegates.cs:220  DEV SyncMethod CompActivity.CompGetGizmosExtra[2]  // Dev go active/go passive
+    -> <CompGetGizmosExtra>d__28::<CompGetGizmosExtra>b__28_2: CompActivity.get_IsDormant, =activityLevelPercent
+Source/Client/Syncing/Game/SyncDelegates.cs:221      SyncMethod CompStudiable.CompGetGizmosExtra[1]  // Toggle study
+    -> <SpecialDisplayStats>d__52::<CompGetGizmosExtra>b__48_1: CompStudiable.SetStudyEnabled
+Source/Client/Syncing/Game/SyncDelegates.cs:222  DEV SyncMethod CompStudiable.CompGetGizmosExtra[2]  // End study cooldown
+    -> <SpecialDisplayStats>d__52::<CompGetGizmosExtra>b__48_2: Find.get_TickManager, TickManager.get_TicksGame, CompStudiable.get_Props, =lastStudiedTick
+Source/Client/Syncing/Game/SyncDelegates.cs:223  DEV SyncMethod CompStudiable.CompGetGizmosExtra[3]  // Complete study
+    -> <SpecialDisplayStats>d__52::<CompGetGizmosExtra>b__48_3: Thing.get_Map, MapPawns.get_FreeColonists, GenCollection.RandomElement, CompStudiable.Study, CompStudiable.get_Completed
+Source/Client/Syncing/Game/SyncDelegates.cs:224  DEV SyncMethod CompStudyUnlocks.CompGetGizmosExtra[0]  // Advance study
+    -> <CompGetGizmosExtra>d__21::<CompGetGizmosExtra>b__21_0: Thing.get_MapHeld, MapPawns.get_FreeColonists, GenCollection.RandomElement, CompStudyUnlocks.RegisterStudyLevel
+Source/Client/Syncing/Game/SyncDelegates.cs:225      SyncMethod CompHoldingPlatformTarget.CompGetGizmosExtra[0]  // Cancel capture
+    -> <CompGetGizmosExtra>d__38::<CompGetGizmosExtra>b__38_0: =targetHolder
+Source/Client/Syncing/Game/SyncDelegates.cs:226      SyncMethod CompHoldingPlatformTarget.CompGetGizmosExtra[2]  // Cancel transfer
+    -> <CompGetGizmosExtra>d__38::<CompGetGizmosExtra>b__38_2: =targetHolder
+Source/Client/Syncing/Game/SyncDelegates.cs:227  DEV SyncMethod CompHoldingPlatformTarget.CompGetGizmosExtra[4]  // Dev escape
+    -> <CompGetGizmosExtra>d__38::<CompGetGizmosExtra>b__38_4: CompHoldingPlatformTarget.Escape
+Source/Client/Syncing/Game/SyncDelegates.cs:228  DEV SyncMethod CompHoldingPlatformTarget.CompGetGizmosExtra[5]  // Dev kill
+    -> <CompGetGizmosExtra>d__38::<CompGetGizmosExtra>b__38_5: Thing.Kill
+Source/Client/Syncing/Game/SyncDelegates.cs:229      SyncDelegate StudyUtility.TargetHoldingPlatformForEntity[2]  // Capture/transfer
+    -> <>c__DisplayClass0_0::<TargetHoldingPlatformForEntity>b__2: <>c__DisplayClass0_0.<TargetHoldingPlatformForEntity>g__CanReserveForTransfer|1, "MessageHolderReserved", LocalTargetInfo.get_Thing, Entity.get_Label, op_Implicit, Messages.Message, Find.get_CurrentMap, ListerThings.ThingsInGroup
+Source/Client/Syncing/Game/SyncDelegates.cs:233  DEV SyncMethod CompFleshmassHeart.CompGetGizmosExtra[0]  // Add 100 growth points
+    -> <CompGetGizmosExtra>d__32::<CompGetGizmosExtra>b__32_0: =growthPoints
+Source/Client/Syncing/Game/SyncDelegates.cs:234  DEV SyncMethod CompFleshmassHeart.CompGetGizmosExtra[1]  // Add 200 fleshbeast points
+    -> <CompGetGizmosExtra>d__32::<CompGetGizmosExtra>b__32_1: =fleshbeastPoints
+Source/Client/Syncing/Game/SyncDelegates.cs:235  DEV SyncMethod CompFleshmassHeart.CompGetGizmosExtra[2]  // Do Tachycardiac Overload
+    -> <CompGetGizmosExtra>d__32::<CompGetGizmosExtra>b__32_2: Building_FleshmassHeart.StartTachycardiacOverload
+Source/Client/Syncing/Game/SyncDelegates.cs:236  DEV SyncDelegate CompFleshmassNucleus.CompGetGizmosExtra[1]  // Create meat
+    -> <>c__DisplayClass21_0::<CompGetGizmosExtra>b__1: GenTicks.get_TicksGame, =debugNextMeatTick
+Source/Client/Syncing/Game/SyncDelegates.cs:237  DEV SyncDelegate CompFleshmassNucleus.CompGetGizmosExtra[3]  // Go active
+    -> <>c__DisplayClass21_1::<CompGetGizmosExtra>b__3: GenTicks.get_TicksGame, =debugActiveTick
+Source/Client/Syncing/Game/SyncDelegates.cs:238  DEV SyncMethod CompFleshmassSpitter.CompGetGizmosExtra[0]  // Remove spit cooldown
+    -> <CompGetGizmosExtra>d__39::<CompGetGizmosExtra>b__39_0: =lastSpitTick, =nextSpitDelay
+Source/Client/Syncing/Game/SyncDelegates.cs:241  DEV SyncDelegate Caravan.GetGizmos[18]  // Trigger random dissolution event (CompDissolution)
+    -> <>c__DisplayClass123_0::<GetGizmos>b__18: GenCollection.RandomElement, ThingCompUtility.TryGetComp, CompDissolution.TriggerDissolutionEvent
+Source/Client/Syncing/Game/SyncDelegates.cs:242  DEV SyncDelegate GroundSpawner.GetGizmos[1]  // Set spawn delay
+    -> <>c__DisplayClass23_0::<GetGizmos>b__1: Find.get_TickManager, TickManager.get_TicksGame, =secondarySpawnTick
+Source/Client/Syncing/Game/SyncDelegates.cs:243  DEV SyncDelegate GeneResourceDrainUtility.GetResourceDrainGizmos[0]  // -10% resource
+    -> <>c__DisplayClass3_0::<GetResourceDrainGizmos>b__0: GeneResourceDrainUtility.OffsetResource
+Source/Client/Syncing/Game/SyncDelegates.cs:244  DEV SyncDelegate GeneResourceDrainUtility.GetResourceDrainGizmos[1]  // +10% resource
+    -> <>c__DisplayClass3_0::<GetResourceDrainGizmos>b__1: GeneResourceDrainUtility.OffsetResource
+Source/Client/Syncing/Game/SyncDelegates.cs:246  DEV SyncDelegate CompCanBeDormant.CompGetGizmosExtra[1]  // Wake up after delay
+    -> <>c__DisplayClass20_0::<CompGetGizmosExtra>b__1: Find.get_TickManager, TickManager.get_TicksGame, =wakeUpOnTick
+Source/Client/Syncing/Game/SyncDelegates.cs:247  DEV SyncDelegate Tile.GetGizmos[0]  // Generate settlement
+    -> <>c::<GetGizmos>b__57_0: Action, "GeneratingMap", Exception>, LongEventHandler.QueueLongEvent
+Source/Client/Syncing/Game/SyncDelegates.cs:248  DEV SyncDelegate Tile.GetGizmos[4]  // Generate map
+    -> <>c__DisplayClass57_0::<GetGizmos>b__4: Action, =<>9__5, "GeneratingMap", Exception>, LongEventHandler.QueueLongEvent
+Source/Client/Syncing/Game/SyncDelegates.cs:253      SyncDelegate Hediff_DeathRefusal.GetGizmos[2]  // Self resurrect
+    -> <>c__DisplayClass27_0::<GetGizmos>b__2: TickTimer.get_Finished, Hediff_DeathRefusal.Use, Command_ActionWithLimitedUseCount.UpdateUsesLeft
+Source/Client/Syncing/Game/SyncDelegates.cs:255  DEV SyncMethod Hediff_Labor.GetGizmos[0]  // Force progress to labor pushing
+    -> <GetGizmos>d__12::<GetGizmos>b__12_0: Pawn_HealthTracker.RemoveHediff
+Source/Client/Syncing/Game/SyncDelegates.cs:256  DEV SyncMethod Hediff_LaborPushing.GetGizmos[0]  // Force stillborn
+    -> <GetGizmos>d__6::<GetGizmos>b__6_0: Hediff_LaborPushing.ForceBirth
+Source/Client/Syncing/Game/SyncDelegates.cs:257  DEV SyncMethod Hediff_LaborPushing.GetGizmos[1]  // Force infant illness
+    -> <GetGizmos>d__6::<GetGizmos>b__6_1: Hediff_LaborPushing.ForceBirth
+Source/Client/Syncing/Game/SyncDelegates.cs:258  DEV SyncMethod Hediff_LaborPushing.GetGizmos[2]  // Force healthy
+    -> <GetGizmos>d__6::<GetGizmos>b__6_2: Hediff_LaborPushing.ForceBirth
+Source/Client/Syncing/Game/SyncDelegates.cs:259  DEV SyncMethod Hediff_LaborPushing.GetGizmos[3]  // Force end
+    -> <GetGizmos>d__6::<GetGizmos>b__6_3: Pawn_HealthTracker.RemoveHediff
+Source/Client/Syncing/Game/SyncDelegates.cs:260  DEV SyncMethod Hediff_Pregnant.GetGizmos[0]  // Next trimester
+    -> <GetGizmos>d__21::<GetGizmos>b__21_0: Hediff.get_CurStageIndex, get_Item, =severityInt
+Source/Client/Syncing/Game/SyncDelegates.cs:261  DEV SyncMethod Hediff_Pregnant.GetGizmos[1]  // Start labor
+    -> <GetGizmos>d__21::<GetGizmos>b__21_1: Hediff_Pregnant.StartLabor, Pawn_HealthTracker.RemoveHediff
+Source/Client/Syncing/Game/SyncDelegates.cs:262  DEV SyncDelegate Hediff_MetalhorrorImplant.GetGizmos[0]  // Emerge
+    -> <>c__DisplayClass42_0::<GetGizmos>b__0: "MetalhorrorReasonRandom", "INFECTED", NamedArgumentUtility.Named, op_Implicit, Hediff_MetalhorrorImplant.Emerge
+Source/Client/Syncing/Game/SyncDelegates.cs:263  DEV SyncDelegate Hediff_MetalhorrorImplant.GetGizmos[1]  // Mark for flesh drop
+    -> <>c__DisplayClass42_0::<GetGizmos>b__1: =filthTimer
+Source/Client/Syncing/Game/SyncDelegates.cs:264  DEV SyncDelegate Hediff_MetalhorrorImplant.GetGizmos[2]  // Discover next interaction
+    -> <>c__DisplayClass42_0::<GetGizmos>b__2: =debugDiscoverNextInteraction
+Source/Client/Syncing/Game/SyncDelegates.cs:265  DEV SyncDelegate Hediff_MetalhorrorImplant.GetGizmos[3]  // Increase lifestage
+    -> <>c__DisplayClass42_0::<GetGizmos>b__3: =ageTicks
+Source/Client/Syncing/Game/SyncDelegates.cs:266  DEV SyncDelegate Hediff_MetalhorrorImplant.GetGizmos[6]  // Change biosignature
+    -> <>c__DisplayClass42_1::<GetGizmos>b__6: Hediff_MetalhorrorImplant.get_Biosignature, ImplantSource.DebugSetBiosignature
+Source/Client/Syncing/Game/SyncDelegates.cs:267  DEV SyncMethod Hediff_Shambler.GetGizmos[0]  // Self raise
+    -> <GetGizmos>d__36::<GetGizmos>b__36_0: Hediff_Shambler.StartRising
+Source/Client/Syncing/Game/SyncDelegates.cs:271  DEV SyncMethod Building_VoidMonolith.GetGizmos[1]  // Dev activate
+    -> <GetGizmos>d__79::<GetGizmos>b__79_1: Thing.get_Map, MapPawns.get_FreeColonists, GenCollection.TryRandomElement, Building_VoidMonolith.Activate
+Source/Client/Syncing/Game/SyncDelegates.cs:272  DEV SyncMethod Building_VoidMonolith.GetGizmos[2]  // Dev relink
+    -> <GetGizmos>d__79::<GetGizmos>b__79_2: Find.get_Anomaly, =monolith
+Source/Client/Syncing/Game/SyncDelegates.cs:275      SyncDelegate Building_VoidMonolith.GetFloatMenuOptions[0]  // 
+    -> <>c__DisplayClass80_0::<GetFloatMenuOptions>b__0: Building_VoidMonolith.OrderActivation
+Source/Client/Syncing/Game/SyncDelegates.cs:277      SyncDelegate CompNociosphere.TargetLocation[1]  // 
+    -> <>c__DisplayClass60_0::<TargetLocation>b__1: LocalTargetInfo.get_Cell, =sendLocation, op_Implicit, CompNociosphere.<>n__1
+Source/Client/Syncing/Game/SyncDelegates.cs:280      SyncDelegate Pawn_TrainingTracker.GetGizmos[0]  // Force attack target
+    -> <>c__DisplayClass25_0::<GetGizmos>b__0: Find.get_Selector, Selector.get_SelectedObjects, bool>, Enumerable.Where, Enumerable.Cast, LocalTargetInfo.get_Cell, Thing.get_Position, IntVec3.InHorDistOf
+Source/Client/Syncing/Game/SyncDelegates.cs:281      SyncDelegate Pawn_TrainingTracker.GetGizmos[3]  // Cancel attacking target
+    -> <>c::<GetGizmos>b__25_3: Find.get_Selector, Selector.get_SelectedObjects, bool>, Enumerable.Where, Enumerable.Cast, Pawn>.GetEnumerator, Pawn>.get_Current, =attackTarget
+UNPARSED Source/Client/Syncing/Game/SyncDelegates.cs:284  SyncDelegate.Lambda(typeof(ColonistBar.Entry), null, lambdaOrdinal: 0, parentMethodType: MethodType.Constructor, parentArgs: [typeof(Pawn), typeof(Map), typeof(int)]);
+Source/Client/Syncing/Game/SyncDelegates.cs:294      SyncDelegate LordJob_Ritual.GetPawnGizmos[0]  // Make pawn leave ritual
+    -> <>c__DisplayClass105_0::<GetPawnGizmos>b__0: Pawn>.Add, Lord.Notify_PawnLost, Pawn_JobTracker.EndCurrentJob, SoundStarter.PlayOneShotOnCamera
+Source/Client/Syncing/Game/SyncDelegates.cs:296      SyncDelegate LordJob_BestowingCeremony.GetPawnGizmos[2]  // Cancel ceremony
+    -> <>c__DisplayClass45_0::<GetPawnGizmos>b__2: "CeremonyFailed", "SUBJECT", NamedArgumentUtility.Named, QuestUtility.SendQuestTargetSignals
+Source/Client/Syncing/Game/SyncDelegates.cs:297      SyncDelegate LordJob_BestowingCeremony.GetPawnGizmos[0]  // Make pawn leave ceremony
+    -> <>c__DisplayClass45_0::<GetPawnGizmos>b__0: Lord.Notify_PawnLost, SoundStarter.PlayOneShotOnCamera
+Source/Client/Syncing/Game/SyncDelegates.cs:300      SyncDelegate LordToil_BestowingCeremony_Wait.ExtraFloatMenuOptions[0]  // Begin bestowing float menu
+    -> <>c__DisplayClass7_0::<ExtraFloatMenuOptions>b__0: Find.get_WindowStack, "RitualBestowingCeremony", op_Implicit, Thing.get_Map, LocalTargetInfo.ToTargetInfo, ActionCallback, =<>9__1, PawnFilter
+Source/Client/Syncing/Game/SyncDelegates.cs:303      SyncDelegate CompPsylinkable.CompFloatMenuOptions[0]  // Psylinkable begin linking
+    -> <>c__DisplayClass13_0::<CompFloatMenuOptions>b__0: Pawn.get_Ideo, Ideo.get_PreceptsListForReading, get_Item, Precept>.get_Count, Find.get_WindowStack, op_Implicit, Precept_Ritual.GetRitualBeginWindow, WindowStack.Add
+Source/Client/Syncing/Game/SyncDelegates.cs:305      SyncDelegate SocialCardUtility.DrawPawnRoleSelection[0]  // Begin role change: remove role
+    -> <>c__DisplayClass42_0::<DrawPawnRoleSelection>b__0: Pawn>, "role_changer", Pawn>.Add, Precept_Ritual.GetRitualBeginWindow, Dialog_BeginRitual.SetRoleToChangeTo, Find.get_WindowStack, WindowStack.Add
+Source/Client/Syncing/Game/SyncDelegates.cs:306      SyncDelegate SocialCardUtility.DrawPawnRoleSelection[3]  // Begin role change: assign role
+    -> <>c__DisplayClass42_1::<DrawPawnRoleSelection>b__3: Pawn>, "role_changer", Pawn>.Add, Precept_Ritual.GetRitualBeginWindow, Dialog_BeginRitual.SetRoleToChangeTo, Find.get_WindowStack, WindowStack.Add
+Source/Client/Syncing/Game/SyncDelegates.cs:308      SyncDelegate Dialog_BeginRitual.DrawRoleSelection[0]  // Select role: none
+    -> <>c__DisplayClass54_0::<DrawRoleSelection>b__0: "ChooseRoleConfirmUnassign", "ROLE", NamedArgumentUtility.Named, "PAWN", "\n\n", op_Addition, "ChooseRoleConfirmAssignPostfix", op_Implicit
+Source/Client/Syncing/Game/SyncDelegates.cs:309      SyncDelegate Dialog_BeginRitual.DrawRoleSelection[3]  // Select role, set confirm text
+    -> <>c__DisplayClass54_2::<DrawRoleSelection>b__3: "\n\n", op_Addition, "ChooseRoleConfirmAssignPostfix", op_Implicit, =confirmText, Dialog_BeginRitual.SetRoleToChangeTo
+Source/Client/Syncing/Game/SyncDelegates.cs:310      SyncDelegate Dialog_BeginRitual.DrawRoleSelection[4]  // Select role, no confirm text
+    -> <>c__DisplayClass54_1::<DrawRoleSelection>b__4: Precept_Role.Assign
+Source/Client/Syncing/Game/SyncDelegates.cs:341      SyncDelegate ChoiceLetter_ChoosePawn.Option_ChoosePawn[0]  // Choose pawn (currently used for quest rewards)
+    -> <>c__DisplayClass8_0::<Option_ChoosePawn>b__0: GenText.NullOrEmpty, Find.get_SignalManager, "CHOSEN", NamedArgumentUtility.Named, Signal, SignalManager.SendSignal, Find.get_LetterStack, LetterStack.RemoveLetter
+Source/Client/Syncing/Game/SyncDelegates.cs:343      SyncMethod ChoiceLetter_AcceptJoiner.get_Choices[0]  // Accept joiner
+    -> <get_Choices>d__10::<get_Choices>b__10_0: Find.get_SignalManager, Signal, SignalManager.SendSignal, Find.get_LetterStack, LetterStack.RemoveLetter
+Source/Client/Syncing/Game/SyncDelegates.cs:345      SyncMethod ChoiceLetter_AcceptJoiner.get_Choices[1]  // 
+    -> <get_Choices>d__10::<get_Choices>b__10_1: Find.get_SignalManager, Signal, SignalManager.SendSignal, Find.get_LetterStack, LetterStack.RemoveLetter
+Source/Client/Syncing/Game/SyncDelegates.cs:348      SyncMethod ChoiceLetter_AcceptVisitors.get_Option_Accept[0]  // Accept visitors join offer
+    -> <get_Choices>d__13::<get_Option_Accept>b__9_0: Pawn>, Pawn>.RemoveAll, GenText.NullOrEmpty, Pawn>.GetEnumerator, Pawn>.get_Current, "Recruited", "SUBJECT", NamedArgumentUtility.Named
+Source/Client/Syncing/Game/SyncDelegates.cs:350      SyncMethod ChoiceLetter_AcceptVisitors.get_Option_RejectWithCharityConfirmation[1]  // 
+    -> <get_Choices>d__13::<get_Option_RejectWithCharityConfirmation>b__11_1: GenText.NullOrEmpty, Pawn>.get_Count, get_Item, Find.get_SignalManager, "SUBJECT", NamedArgumentUtility.Named, Signal, SignalManager.SendSignal
+Source/Client/Syncing/Game/SyncDelegates.cs:353      SyncMethod ChoiceLetter_RansomDemand.get_Choices[0]  // Accept ransom demand
+    -> <get_Choices>d__5::<get_Choices>b__5_0: KidnappedPawnsTracker.RemoveKidnappedPawn, Find.get_WorldPawns, WorldPawns.RemovePawn, IntVec3>, CellFinder.TryFindRandomEdgeCellWith, "Could not find any edge cell.", Log.Warning, DropCellFinder.TradeDropSpot
+Source/Client/Syncing/Game/SyncDelegates.cs:355      SyncMethod ChoiceLetter.get_Option_Reject[0]  // 
+    -> <>c__DisplayClass21_0::<get_Option_Reject>b__18_0: Find.get_LetterStack, LetterStack.RemoveLetter
+Source/Client/Syncing/Game/SyncDelegates.cs:372      SyncMethod ChoiceLetter_AcceptCreepJoiner.get_Choices[0]  // Accept joiner
+    -> <get_Choices>d__10::<get_Choices>b__10_0: Thing.get_Spawned, Find.get_SignalManager, Signal, SignalManager.SendSignal, Find.get_LetterStack, LetterStack.RemoveLetter
+Source/Client/Syncing/Game/SyncDelegates.cs:373      SyncMethod ChoiceLetter_AcceptCreepJoiner.get_Choices[1]  // Arrest joiner
+    -> <get_Choices>d__10::<get_Choices>b__10_1: Thing.get_Spawned, Find.get_SignalManager, Signal, SignalManager.SendSignal
+Source/Client/Syncing/Game/SyncDelegates.cs:375      SyncMethod ChoiceLetter_AcceptCreepJoiner.get_Choices[2]  // 
+    -> <get_Choices>d__10::<get_Choices>b__10_2: Thing.get_Spawned, Find.get_SignalManager, Signal, SignalManager.SendSignal, Find.get_LetterStack, LetterStack.RemoveLetter
+Source/Client/Syncing/Game/SyncDelegates.cs:506      SyncDelegate GeneUIUtility.DoDebugButton[4]  // 
+    -> <>c__DisplayClass25_0::<DoDebugButton>b__4: Pawn_GeneTracker.Debug_AddAllGenes
+Source/Client/Syncing/Game/SyncDelegates.cs:508      SyncDelegate GeneUIUtility.DoDebugButton[5]  // 
+    -> <>c__DisplayClass25_0::<DoDebugButton>b__5: Pawn_GeneTracker.Debug_AddAllGenes
+Source/Client/Syncing/Game/SyncDelegates.cs:510      SyncDelegate GeneUIUtility.DoDebugButton[7]  // 
+    -> <>c__DisplayClass25_0::<DoDebugButton>b__7: Pawn_GeneTracker.get_Endogenes, Gene>.get_Count, get_Item, Pawn_GeneTracker.RemoveGene, Pawn_GeneTracker.get_Xenotype, Pawn_GeneTracker.SetXenotype
+Source/Client/Syncing/Game/SyncDelegates.cs:514      SyncDelegate GeneUIUtility.DoDebugButton[11]  // 
+    -> <>c__DisplayClass25_1::<DoDebugButton>b__11: Pawn_GeneTracker.RemoveGene
+Source/Client/Syncing/Game/SyncDelegates.cs:516      SyncDelegate GeneUIUtility.DoDebugButton[12]  // 
+    -> <>c__DisplayClass25_2::<DoDebugButton>b__12: Pawn_GeneTracker.SetXenotype
+Source/Client/Syncing/Game/SyncDelegates.cs:518      SyncDelegate GeneUIUtility.DoDebugButton[13]  // 
+    -> <>c__DisplayClass25_3::<DoDebugButton>b__13: GeneSet.Debug_RemoveGene
+Source/Client/Syncing/Game/SyncDelegates.cs:522  DEV SyncDelegate DebugToolsPawns.Options_SetPrimary[0]  // Remove primary weapon/eqiupment
+    -> <>c__DisplayClass55_0::<Options_SetPrimary>b__0: Pawn_EquipmentTracker.get_Primary, Pawn_EquipmentTracker.DestroyEquipment
+Source/Client/Syncing/Game/SyncDelegates.cs:523  DEV SyncDelegate DebugToolsPawns.Options_SetPrimary[3]  // Set primary weapon/eqiupment
+    -> <>c__DisplayClass55_1::<Options_SetPrimary>b__3: Pawn_EquipmentTracker.get_Primary, Pawn_EquipmentTracker.DestroyEquipment, GenStuff.RandomStuffFor, ThingMaker.MakeThing, Pawn_EquipmentTracker.AddEquipment
+Source/Client/Syncing/Game/SyncDelegates.cs:524  DEV SyncDelegate DebugToolsPawns.Options_Wear[0]  // Remove all apparel
+    -> <>c__DisplayClass54_0::<Options_Wear>b__0: Pawn_ApparelTracker.DestroyAll
+Source/Client/Syncing/Game/SyncDelegates.cs:525  DEV SyncDelegate DebugToolsPawns.Options_Wear[3]  // Wear specified apparel
+    -> <>c__DisplayClass54_1::<Options_Wear>b__3: GenStuff.RandomStuffFor, ThingMaker.MakeThing, Pawn_ApparelTracker.Wear
+Source/Client/Syncing/Game/SyncDelegates.cs:526  DEV SyncDelegate DebugToolsPawns.Options_GiveToInventory[0]  // Clear inventory
+    -> <>c__DisplayClass56_0::<Options_GiveToInventory>b__0: Pawn_InventoryTracker.DestroyAll
+Source/Client/Syncing/Game/SyncDelegates.cs:527  DEV SyncDelegate DebugToolsPawns.Options_GiveToInventory[3]  // Give specified thing
+    -> <>c__DisplayClass56_1::<Options_GiveToInventory>b__3: ThingMaker.MakeThing, Pawn_InventoryTracker.TryAddItemNotForSale
+Source/Client/Syncing/Game/SyncDelegates.cs:528  DEV SyncDelegate DebugToolsPawns.PawnGearDevOptions[3]  // Damage random apparel
+    -> <>c__DisplayClass53_0::<PawnGearDevOptions>b__3: Pawn_ApparelTracker.get_WornApparel, GenCollection.RandomElement, DamageInfo, Thing.TakeDamage
+Source/Client/Syncing/Game/SyncDelegates.cs:531  DEV SyncDelegate DebugTools_Health.Options_Hediff_BodyParts[0]  // Add specified hediff (no body part)
+    -> <>c__DisplayClass6_0::<Options_Hediff_BodyParts>b__0: Pawn_HealthTracker.AddHediff, Hediff.PostDebugAdd
+Source/Client/Syncing/Game/SyncDelegates.cs:532  DEV SyncDelegate DebugTools_Health.Options_Hediff_BodyParts[2]  // Add specified hediff to specified body part
+    -> <>c__DisplayClass6_1::<Options_Hediff_BodyParts>b__2: Pawn_HealthTracker.AddHediff, Hediff.PostDebugAdd
+Source/Client/Syncing/Game/SyncMethods.cs:126      SyncMethod CompTempControl.CompGetGizmosExtra[2]  // Reset temperature
+    -> <CompGetGizmosExtra>d__14::<CompGetGizmosExtra>b__14_2: CompTempControl.set_TargetTemperature, SoundStarter.PlayOneShotOnCamera, CompTempControl.ThrowCurrentTemperatureText
+Source/Client/Syncing/Game/SyncMethods.cs:127      SyncMethod Comp_AtmosphericHeater.CompGetGizmosExtra[0]  // Reset temperature
+    -> <CompGetGizmosExtra>d__20::<CompGetGizmosExtra>b__20_0: CompTempControl.set_TargetTemperature, SoundStarter.PlayOneShotOnCamera, CompTempControl.ThrowCurrentTemperatureText
+Source/Client/Syncing/Game/SyncMethods.cs:132      SyncMethod Command_SetTargetFuelLevel.ProcessInput[2]  // 
+    -> <>c::<ProcessInput>b__2_2: get_Item, CompRefuelable.set_TargetFuelLevel, CompRefuelable>.get_Count
+Source/Client/Syncing/Game/SyncMethods.cs:183  DEV SyncMethod CompLaunchable.CompGetGizmosExtra[3]  // DEV: reset launch cooldown
+    -> <GetTransportersFloatMenuOptionsAt>d__48::<CompGetGizmosExtra>b__36_3: Find.get_TickManager, TickManager.get_TicksGame, CompLaunchable.get_Props, =lastLaunchTick
+Source/Client/Syncing/Game/SyncMethods.cs:208      SyncMethod Plant.GetGizmos[0]  // Cut all blighted
+    -> <SpecialDisplayStats>d__120::<GetGizmos>b__119_0: Thing.get_Map, ListerThings.ThingsInGroup, Thing>.GetEnumerator, Thing>.get_Current, Plant.get_Blighted, DesignationManager.HasMapDesignationOn, op_Implicit, Designation
+Source/Client/Syncing/Game/SyncMethods.cs:209  DEV SyncMethod Plant.GetGizmos[1]  // Dev spread blight
+    -> <SpecialDisplayStats>d__120::<GetGizmos>b__119_1: Plant.get_Blight, Blight.TryReproduceNow
+Source/Client/Syncing/Game/SyncMethods.cs:243  DEV SyncMethod Building_FermentingBarrel.GetGizmos[0]  // Set progress to 1
+    -> <GetGizmos>d__36::<GetGizmos>b__36_0: Building_FermentingBarrel.set_Progress
+Source/Client/Syncing/Game/SyncMethods.cs:244  DEV SyncMethod Building_FermentingBarrel.GetGizmos[1]  // Fill
+    -> <GetGizmos>d__36::<GetGizmos>b__36_1: Building_FermentingBarrel.set_Progress, =wortCount
+Source/Client/Syncing/Game/SyncMethods.cs:245  DEV SyncMethod CompBandNode.CompGetGizmosExtra[8]  // Complete tuning
+    -> <CompGetGizmosExtra>d__21::<CompGetGizmosExtra>b__21_8: =tuningTimeLeft
+Source/Client/Syncing/Game/SyncMethods.cs:246  DEV SyncMethod CompCauseGameCondition_ForceWeather.CompGetGizmosExtra[0]  // Change to next weather
+    -> <CompGetGizmosExtra>d__3::<CompGetGizmosExtra>b__3_0: WeatherDef>.get_AllDefsListForReading, WeatherDef>, WeatherDef>.FindIndex, WeatherDef>.get_Count, get_Item, =weather, CompCauseGameCondition.ReSetupAllConditions
+Source/Client/Syncing/Game/SyncMethods.cs:247  DEV SyncMethod CompCauseGameCondition_PsychicEmanation.CompGetGizmosExtra[0]  // Change gender
+    -> <CompGetGizmosExtra>d__15::<CompGetGizmosExtra>b__15_0: =gender, CompCauseGameCondition.ReSetupAllConditions
+Source/Client/Syncing/Game/SyncMethods.cs:248  DEV SyncMethod CompCauseGameCondition_PsychicEmanation.CompGetGizmosExtra[1]  // Increase intensity
+    -> <CompGetGizmosExtra>d__15::<CompGetGizmosExtra>b__15_1: CompCauseGameCondition_PsychicEmanation.IncreaseDroneLevel, CompCauseGameCondition.ReSetupAllConditions
+Source/Client/Syncing/Game/SyncMethods.cs:249  DEV SyncMethod CompCauseGameCondition_PsychicSuppression.CompGetGizmosExtra[0]  // Change gender
+    -> <CompGetGizmosExtra>d__3::<CompGetGizmosExtra>b__3_0: =gender, CompCauseGameCondition.ReSetupAllConditions
+Source/Client/Syncing/Game/SyncMethods.cs:252  DEV SyncMethod CompDeepDrill.CompGetGizmosExtra[0]  // 
+    -> <CompGetGizmosExtra>d__18::<CompGetGizmosExtra>b__18_0: CompDeepDrill.TryProducePortion
+Source/Client/Syncing/Game/SyncMethods.cs:253  DEV SyncMethod CompDissolution.CompGetGizmosExtra[0]  // Dissolution event
+    -> <CompGetGizmosExtra>d__28::<CompGetGizmosExtra>b__28_0: CompDissolution.TriggerDissolutionEvent
+Source/Client/Syncing/Game/SyncMethods.cs:254  DEV SyncMethod CompDissolution.CompGetGizmosExtra[1]  // Dissolution event until destroyed
+    -> <CompGetGizmosExtra>d__28::<CompGetGizmosExtra>b__28_1: CompDissolution.TriggerDissolutionEvent, Thing.get_Destroyed
+Source/Client/Syncing/Game/SyncMethods.cs:255  DEV SyncMethod CompDissolution.CompGetGizmosExtra[2]  // Dissolution progress +25%
+    -> <CompGetGizmosExtra>d__28::<CompGetGizmosExtra>b__28_2: CompDissolution.get_DissolutionAfterDamage, DamageInfo, Thing.TakeDamage
+Source/Client/Syncing/Game/SyncMethods.cs:256  DEV SyncMethod CompEggContainer.CompGetGizmosExtra[0]  // Fill with eggs
+    -> <CompGetGizmosExtra>d__6::<CompGetGizmosExtra>b__6_0: "EggChickenUnfertilized", ThingDef.Named, ThingMaker.MakeThing, CompThingContainer.get_Props, =stackCount, ThingOwner.TryAdd
+Source/Client/Syncing/Game/SyncMethods.cs:257      SyncMethod CompHackable.CompGetGizmosExtra[1]  // Toggle auto hack
+    -> <SpecialDisplayStats>d__49::<CompGetGizmosExtra>b__51_1: =autohack, CompHackable.get_Props, GenText.NullOrEmpty, op_Implicit, GrammarResolverSimpleStringExtensions.Formatted, Messages.Message
+Source/Client/Syncing/Game/SyncMethods.cs:258  DEV SyncMethod CompHackable.CompGetGizmosExtra[7]  // DEV: Hack +10%
+    -> <SpecialDisplayStats>d__49::<CompGetGizmosExtra>b__51_7: CompHackable.Hack
+Source/Client/Syncing/Game/SyncMethods.cs:259  DEV SyncMethod CompHackable.CompGetGizmosExtra[8]  // DEV: Complete hack
+    -> <SpecialDisplayStats>d__49::<CompGetGizmosExtra>b__51_8: CompHackable.HackNow
+Source/Client/Syncing/Game/SyncMethods.cs:263  DEV SyncMethod CompProjectileInterceptor.CompGetGizmosExtra[0]  // Reset cooldown
+    -> <CompGetGizmosExtra>d__63::<CompGetGizmosExtra>b__63_0: Find.get_TickManager, TickManager.get_TicksGame, CompProjectileInterceptor.get_Props, =lastInterceptTicks
+Source/Client/Syncing/Game/SyncMethods.cs:264  DEV SyncMethod CompProjectileInterceptor.CompGetGizmosExtra[2]  // Toggle intercept non-hostile
+    -> <CompGetGizmosExtra>d__63::<CompGetGizmosExtra>b__63_2: =debugInterceptNonHostileProjectiles
+Source/Client/Syncing/Game/SyncMethods.cs:265  DEV SyncMethod CompApparelVerbOwner_Charged.CompGetWornGizmosExtra[0]  // Reload to full
+    -> <SpecialDisplayStats>d__13::<CompGetWornGizmosExtra>b__15_0: CompApparelVerbOwner_Charged.get_MaxCharges, =remainingCharges
+Source/Client/Syncing/Game/SyncMethods.cs:266  DEV SyncMethod CompEquippableAbilityReloadable.CompGetEquippedGizmosExtra[0]  // Reload to full
+    -> <SpecialDisplayStats>d__23::<CompGetEquippedGizmosExtra>b__24_0: CompEquippableAbilityReloadable.get_MaxCharges, CompEquippableAbilityReloadable.set_RemainingCharges
+Source/Client/Syncing/Game/SyncMethods.cs:267  DEV SyncMethod CompScanner.CompGetGizmosExtra[0]  // Find now
+    -> <CompGetGizmosExtra>d__15::<CompGetGizmosExtra>b__15_0: PawnsFinder.get_AllMaps_FreeColonists, GenCollection.RandomElement, CompScanner.DoFind
+Source/Client/Syncing/Game/SyncMethods.cs:268  DEV SyncMethod CompTerrainPump.CompGetGizmosExtra[0]  // Progress 1 day
+    -> <CompGetGizmosExtra>d__19::<CompGetGizmosExtra>b__19_0: =progressTicks
+Source/Client/Syncing/Game/SyncMethods.cs:270  DEV SyncMethod CompToxifier.CompGetGizmosExtra[1]  // Pollute all, calls a synced method PolluteNextCell on loop which would cause infinite loop in MP if unsynced
+    -> <CompGetGizmosExtra>d__11::<CompGetGizmosExtra>b__11_1: CompToxifier.PolluteNextCell, CompToxifier.get_CanPolluteNow
+Source/Client/Syncing/Game/SyncMethods.cs:271  DEV SyncMethod MinifiedTree.GetGizmos[0]  // Destroy
+    -> <GetGizmos>d__16::<GetGizmos>b__16_0: Thing.Destroy
+Source/Client/Syncing/Game/SyncMethods.cs:272  DEV SyncMethod MinifiedTree.GetGizmos[1]  // Die in 1 hour
+    -> <GetGizmos>d__16::<GetGizmos>b__16_1: =ticksTillDeath
+Source/Client/Syncing/Game/SyncMethods.cs:273  DEV SyncMethod MinifiedTree.GetGizmos[2]  // Die in 1 day
+    -> <GetGizmos>d__16::<GetGizmos>b__16_2: =ticksTillDeath
+Source/Client/Syncing/Game/SyncMethods.cs:274  DEV SyncMethod Pawn.GetGizmos[0]  // Psyfocus -20%
+    -> <get_IngredientStackCells>d__226::<GetGizmos>b__346_0: Pawn_PsychicEntropyTracker.OffsetPsyfocusDirectly
+Source/Client/Syncing/Game/SyncMethods.cs:275  DEV SyncMethod Pawn.GetGizmos[1]  // Psyfocus +20%
+    -> <get_IngredientStackCells>d__226::<GetGizmos>b__346_1: Pawn_PsychicEntropyTracker.OffsetPsyfocusDirectly
+Source/Client/Syncing/Game/SyncMethods.cs:276  DEV SyncMethod Pawn.GetGizmos[2]  // Psychic entropy -20%
+    -> <get_IngredientStackCells>d__226::<GetGizmos>b__346_2: Pawn_PsychicEntropyTracker.TryAddEntropy
+Source/Client/Syncing/Game/SyncMethods.cs:277  DEV SyncMethod Pawn.GetGizmos[3]  // Psychic entropy +20%
+    -> <get_IngredientStackCells>d__226::<GetGizmos>b__346_3: Pawn_PsychicEntropyTracker.TryAddEntropy
+Source/Client/Syncing/Game/SyncMethods.cs:278  DEV SyncMethod Pawn.GetGizmos[6]  // Reset faction permit cooldowns
+    -> <get_IngredientStackCells>d__226::<GetGizmos>b__346_6: Pawn_RoyaltyTracker.get_AllFactionPermits, FactionPermit>.GetEnumerator, FactionPermit>.get_Current, FactionPermit.ResetCooldown, FactionPermit>.MoveNext, IDisposable.Dispose
+Source/Client/Syncing/Game/SyncMethods.cs:279  DEV SyncMethod Pawn.GetGizmos[7]  // Reset try romance cooldown
+    -> <get_IngredientStackCells>d__226::<GetGizmos>b__346_7: =romanceEnableTick
+Source/Client/Syncing/Game/SyncMethods.cs:282  DEV SyncMethod Building_Bookcase.GetGizmos[0]  // Fill with books
+    -> <get_CellsFilledPercentage>d__23::<GetGizmos>b__72_0: Building_Bookcase.get_HeldBooks, Book>.get_Count, BookUtility.MakeBook, ThingOwner.TryAdd, Building_Bookcase.get_MaximumBooks
+Source/Client/Syncing/Game/SyncMethods.cs:283  DEV SyncMethod Building_WorkTableAutonomous.GetGizmos[0]  // Forming cycle +25%
+    -> <GetGizmos>d__21::<GetGizmos>b__21_0: Building_WorkTableAutonomous.get_ActiveBill, =formingTicks
+Source/Client/Syncing/Game/SyncMethods.cs:284  DEV SyncMethod Building_WorkTableAutonomous.GetGizmos[1]  // Complete cycle
+    -> <GetGizmos>d__21::<GetGizmos>b__21_1: Building_WorkTableAutonomous.get_ActiveBill, =formingTicks
+Source/Client/Syncing/Game/SyncMethods.cs:285  DEV SyncMethod CompAbilityEffect_ResurrectMech.CompGetGizmosExtra[0]  // Add charge
+    -> <CustomWarmupMotes>d__16::<CompGetGizmosExtra>b__15_0: =resurrectCharges
+Source/Client/Syncing/Game/SyncMethods.cs:286  DEV SyncMethod CompAbilityEffect_ResurrectMech.CompGetGizmosExtra[1]  // Remove charge
+    -> <CustomWarmupMotes>d__16::<CompGetGizmosExtra>b__15_1: =resurrectCharges, Mathf.Max
+Source/Client/Syncing/Game/SyncMethods.cs:287  DEV SyncMethod CompAnalyzable.CompGetGizmosExtra[0]  // Finish analysis
+    -> <CompGetGizmosExtra>d__15::<CompGetGizmosExtra>b__15_0: Find.get_CurrentMap, MapPawns.get_FreeColonistsSpawned, Enumerable.First, CompAnalyzable.OnAnalyzed
+Source/Client/Syncing/Game/SyncMethods.cs:288  DEV SyncMethod CompChimera.CompGetGizmosExtra[0]  // Switch stalk/attack mode
+    -> <CompGetGizmosExtra>d__9::<CompGetGizmosExtra>b__9_0: CompChimera.get_Pawn, LordUtility.GetLord, Faction.get_OfEntities, LordJob_ChimeraAssault, Thing.get_Map, Pawn>, Pawn>.Add, LordMaker.MakeNewLord
+Source/Client/Syncing/Game/SyncMethods.cs:290  DEV SyncMethod CompGrayStatueGas.CompGetGizmosExtra[0]  // Test gas spread
+    -> <CompGetGizmosExtra>d__7::<CompGetGizmosExtra>b__7_0: Thing.get_Map, Thing.get_Position, CompGrayStatueGas.get_GasAmount, IntVec3>, GasGrid.EstimateGasDiffusion
+Source/Client/Syncing/Game/SyncMethods.cs:291  DEV SyncMethod CompInteractable.CompGetGizmosExtra[1]  // Reset cooldown
+    -> <CompGetGizmosExtra>d__62::<CompGetGizmosExtra>b__62_1: =cooldownTicks, CompInteractable.CooldownEnded
+Source/Client/Syncing/Game/SyncMethods.cs:294  DEV SyncMethod CompPowerTrader.CompGetGizmosExtra[0]  // Toggle power on/off
+    -> <CompGetGizmosExtra>d__39::<CompGetGizmosExtra>b__39_0: CompPowerTrader.get_PowerOn, CompPowerTrader.set_PowerOn
+Source/Client/Syncing/Game/SyncMethods.cs:295  DEV SyncMethod CompProximityFuse.CompGetGizmosExtra[0]  // Trigger
+    -> <CompGetGizmosExtra>d__3::<CompGetGizmosExtra>b__3_0: ThingWithComps.GetComp, CompExplosive.StartWick
+Source/Client/Syncing/Game/SyncMethods.cs:296  DEV SyncMethod CompRevenant.CompGetGizmosExtra[0]  // Reset hypnosis cooldown
+    -> <CompGetGizmosExtra>d__45::<CompGetGizmosExtra>b__45_0: Find.get_TickManager, TickManager.get_TicksGame, =nextHypnosis
+Source/Client/Syncing/Game/SyncMethods.cs:297  DEV SyncMethod CompRevenant.CompGetGizmosExtra[1]  // Change to wander mode
+    -> <CompGetGizmosExtra>d__45::<CompGetGizmosExtra>b__45_1: =revenantState, CompRevenant.get_Revenant, =enemyTarget, Pawn_JobTracker.EndCurrentJob
+Source/Client/Syncing/Game/SyncMethods.cs:298  DEV SyncMethod CompRevenant.CompGetGizmosExtra[2]  // Change to sleep mode
+    -> <CompGetGizmosExtra>d__45::<CompGetGizmosExtra>b__45_2: =revenantState, CompRevenant.get_Revenant, =enemyTarget, Pawn_JobTracker.EndCurrentJob
+Source/Client/Syncing/Game/SyncMethods.cs:299  DEV SyncMethod CompRevenant.CompGetGizmosExtra[3]  // Find target
+    -> <CompGetGizmosExtra>d__45::<CompGetGizmosExtra>b__45_3: CompRevenant.get_Revenant, RevenantUtility.ScanForTarget, =enemyTarget, =revenantState, Pawn_JobTracker.EndCurrentJob
+Source/Client/Syncing/Game/SyncMethods.cs:301  DEV SyncMethod CompShield.CompGetWornGizmosExtra[0]  // Reset
+    -> <GetGizmos>d__31::<CompGetWornGizmosExtra>b__29_0: =ticksToReset
+Source/Client/Syncing/Game/SyncMethods.cs:303  DEV SyncMethod CompSpawnSubplant.CompGetGizmosExtra[0]  // Add 100% progress
+    -> <CompGetGizmosExtra>d__17::<CompGetGizmosExtra>b__17_0: CompSpawnSubplant.AddProgress
+Source/Client/Syncing/Game/SyncMethods.cs:304  DEV SyncMethod CompVoidStructure.CompGetGizmosExtra[0]  // Activate
+    -> <CompGetGizmosExtra>d__16::<CompGetGizmosExtra>b__16_0: Thing.get_Map, MapPawns.get_FreeColonistsSpawned, GenCollection.RandomElement, CompInteractable.Interact
+Source/Client/Syncing/Game/SyncMethods.cs:305  DEV SyncMethod CompObelisk.CompGetGizmosExtra[0]  // Trigger interaction effect
+    -> <CompGetGizmosExtra>d__40::<CompGetGizmosExtra>b__40_0: Find.get_CurrentMap, MapPawns.get_FreeColonistsSpawned, GenCollection.RandomElement, CompObelisk.TriggerInteractionEffect
+Source/Client/Syncing/Game/SyncMethods.cs:306  DEV SyncMethod Pawn_NeedsTracker.GetGizmos[0]  // +5% mech energy
+    -> <GetGizmos>d__39::<GetGizmos>b__39_0: Need.get_CurLevelPercentage, Need.set_CurLevelPercentage
+Source/Client/Syncing/Game/SyncMethods.cs:307  DEV SyncMethod Pawn_NeedsTracker.GetGizmos[1]  // -5% mech energy
+    -> <GetGizmos>d__39::<GetGizmos>b__39_1: Need.get_CurLevelPercentage, Need.set_CurLevelPercentage
+Source/Client/Syncing/Game/SyncMethods.cs:309  DEV SyncMethod Caravan.GetGizmos[4]  // End shuttle cooldown            SyncMethod.Lambda(typeof(Caravan), nameof(Caravan.GetGizmos), 4).SetDebugOnly();  // End shuttle cooldown
+    -> <GetTransportersFloatMenuOptions>d__126::<GetGizmos>b__123_4: Caravan.get_Shuttle, Building_PassengerShuttle.get_LaunchableComp, Find.get_TickManager, TickManager.get_TicksGame, CompLaunchable.get_Props, =lastLaunchTick
+Source/Client/Syncing/Game/SyncMethods.cs:310  DEV SyncMethod Caravan.GetGizmos[5]  // Cause mental break            SyncMethod.Lambda(typeof(Caravan), nameof(Caravan.GetGizmos), 5).SetDebugOnly();  // Cause mental break
+    -> <GetTransportersFloatMenuOptions>d__126::<GetGizmos>b__123_5: Caravan.get_PawnsListForReading, bool>, Enumerable.Where, GenCollection.TryRandomElement, MentalStateHandler.TryStartMentalState
+Source/Client/Syncing/Game/SyncMethods.cs:311  DEV SyncMethod Caravan.GetGizmos[7]  // Make random pawn hungry            SyncMethod.Lambda(typeof(Caravan), nameof(Caravan.GetGizmos), 7).SetDebugOnly();  // Make random pawn hungry
+    -> <GetTransportersFloatMenuOptions>d__126::<GetGizmos>b__123_7: Caravan.get_PawnsListForReading, bool>, Enumerable.Where, GenCollection.TryRandomElement, Need.set_CurLevelPercentage
+Source/Client/Syncing/Game/SyncMethods.cs:312  DEV SyncMethod Caravan.GetGizmos[9]  // Kill random pawn            SyncMethod.Lambda(typeof(Caravan), nameof(Caravan.GetGizmos), 9).SetDebugOnly();  // Kill random pawn
+    -> <GetTransportersFloatMenuOptions>d__126::<GetGizmos>b__123_9: Caravan.get_PawnsListForReading, GenCollection.TryRandomElement, Thing.Kill, "DEV: Killed ", Entity.get_LabelShort, String.Concat, op_Implicit, Messages.Message
+Source/Client/Syncing/Game/SyncMethods.cs:313  DEV SyncMethod Caravan.GetGizmos[10]  // Kill all non-slave pawns            SyncMethod.Lambda(typeof(Caravan), nameof(Caravan.GetGizmos), 10).SetDebugOnly(); // Kill all non-slave pawns
+    -> <GetTransportersFloatMenuOptions>d__126::<GetGizmos>b__123_10: Caravan.get_PawnsListForReading, Pawn>.get_Count, get_Item, Pawn.get_IsSlave, Thing.Kill, "DEV: Killed ", Entity.get_LabelShort, String.Concat
+Source/Client/Syncing/Game/SyncMethods.cs:314  DEV SyncMethod Caravan.GetGizmos[11]  // Harm random pawn            SyncMethod.Lambda(typeof(Caravan), nameof(Caravan.GetGizmos), 11).SetDebugOnly(); // Harm random pawn
+    -> <GetTransportersFloatMenuOptions>d__126::<GetGizmos>b__123_11: Caravan.get_PawnsListForReading, GenCollection.TryRandomElement, DamageInfo..ctor, Thing.TakeDamage
+Source/Client/Syncing/Game/SyncMethods.cs:315  DEV SyncMethod Caravan.GetGizmos[12]  // Down random pawn            SyncMethod.Lambda(typeof(Caravan), nameof(Caravan.GetGizmos), 12).SetDebugOnly(); // Down random pawn
+    -> <GetTransportersFloatMenuOptions>d__126::<GetGizmos>b__123_12: Caravan.get_PawnsListForReading, bool>, Enumerable.Where, GenCollection.TryRandomElement, HealthUtility.DamageUntilDowned, "DEV: Downed ", Entity.get_LabelShort, String.Concat
+Source/Client/Syncing/Game/SyncMethods.cs:316  DEV SyncMethod Caravan.GetGizmos[14]  // Plague on random pawn            SyncMethod.Lambda(typeof(Caravan), nameof(Caravan.GetGizmos), 14).SetDebugOnly(); // Plague on random pawn
+    -> <GetTransportersFloatMenuOptions>d__126::<GetGizmos>b__123_14: Caravan.get_PawnsListForReading, bool>, Enumerable.Where, GenCollection.TryRandomElement, HediffMaker.MakeHediff, get_Item, Hediff.set_Severity, Pawn_HealthTracker.AddHediff
+Source/Client/Syncing/Game/SyncMethods.cs:317  DEV SyncMethod Caravan.GetGizmos[16]  // Teleport to destination            SyncMethod.Lambda(typeof(Caravan), nameof(Caravan.GetGizmos), 16).SetDebugOnly(); // Teleport to destination
+    -> <GetTransportersFloatMenuOptions>d__126::<GetGizmos>b__123_16: Caravan_PathFollower.get_Destination, WorldObject.set_Tile, Caravan_PathFollower.StopDead
+Source/Client/Syncing/Game/SyncMethods.cs:318  DEV SyncMethod Caravan.GetGizmos[17]  // +20% psyfocus            SyncMethod.Lambda(typeof(Caravan), nameof(Caravan.GetGizmos), 17).SetDebugOnly(); // +20% psyfocus
+    -> <GetTransportersFloatMenuOptions>d__126::<GetGizmos>b__123_17: Caravan.get_PawnsListForReading, get_Item, Pawn_PsychicEntropyTracker.OffsetPsyfocusDirectly, Pawn>.get_Count
+Source/Client/Syncing/Game/SyncMethods.cs:320  DEV SyncMethod EnterCooldownComp.GetGizmos[0]  // Set enter cooldown to 1 hour
+    -> <GetGizmos>d__16::<GetGizmos>b__16_0: GenTicks.get_TicksGame, =endTick
+Source/Client/Syncing/Game/SyncMethods.cs:321  DEV SyncMethod EnterCooldownComp.GetGizmos[1]  // Reset enter cooldown
+    -> <GetGizmos>d__16::<GetGizmos>b__16_1: GenTicks.get_TicksGame, =endTick
+Source/Client/Syncing/Game/SyncMethods.cs:322  DEV SyncMethod TimedDetectionRaids.GetGizmos[0]  // Set raid timer to 1 hour
+    -> <GetGizmos>d__27::<GetGizmos>b__27_0: =ticksLeftToSendRaid
+Source/Client/Syncing/Game/SyncMethods.cs:323  DEV SyncMethod TimedDetectionRaids.GetGizmos[1]  // Disable raid timer
+    -> <GetGizmos>d__27::<GetGizmos>b__27_1: =ticksLeftToSendRaid
+Source/Client/Syncing/Game/SyncMethods.cs:324  DEV SyncMethod TimedDetectionRaids.GetGizmos[2]  // Set notify raid timer to 1 hour
+    -> <GetGizmos>d__27::<GetGizmos>b__27_2: =ticksLeftTillNotifyPlayer
+Source/Client/Syncing/Game/SyncMethods.cs:325  DEV SyncMethod Corpse.GetGizmos[0]  // Resurrect
+    -> <get_IngredientStackCells>d__25::<GetGizmos>b__57_0: Corpse.get_InnerPawn, ResurrectionUtility.TryResurrect
+Source/Client/Syncing/Game/SyncMethods.cs:326  DEV SyncMethod Corpse.GetGizmos[1]  // Resurrect as shambler
+    -> <get_IngredientStackCells>d__25::<GetGizmos>b__57_1: Corpse.get_InnerPawn, MutantUtility.ResurrectAsShambler
+Source/Client/Syncing/Game/SyncMethods.cs:327  DEV SyncMethod UnnaturalCorpse.GetGizmos[0]  // Disappear
+    -> <GetGizmos>d__20::<GetGizmos>b__20_0: Find.get_Anomaly, UnnaturalCorpseTracker.get_Haunted, GameComponent_Anomaly.DevRemoveUnnaturalCorpse
+Source/Client/Syncing/Game/SyncMethods.cs:328  DEV SyncMethod UnnaturalCorpse.GetGizmos[1]  // Teleport
+    -> <GetGizmos>d__20::<GetGizmos>b__20_1: =teleport
+Source/Client/Syncing/Game/SyncMethods.cs:329  DEV SyncMethod UnnaturalCorpse.GetGizmos[2]  // Mental break
+    -> <GetGizmos>d__20::<GetGizmos>b__20_2: UnnaturalCorpseTracker.TryTriggerMentalBreak
+Source/Client/Syncing/Game/SyncMethods.cs:330  DEV SyncMethod UnnaturalCorpse.GetGizmos[3]  // Awake
+    -> <GetGizmos>d__20::<GetGizmos>b__20_3: UnnaturalCorpseTracker.DevAwaken
+Source/Client/Syncing/Game/SyncMethods.cs:331  DEV SyncMethod UnnaturalCorpse.GetGizmos[4]  // Unlock deactivation
+    -> <GetGizmos>d__20::<GetGizmos>b__20_4: UnnaturalCorpseTracker.DevUnlockDeactivation
+Source/Client/Syncing/Game/SyncMethods.cs:332  DEV SyncMethod Thing.GetGizmos[0]  // Extinguish
+    -> <get_DescriptionHyperlinks>d__217::<GetGizmos>b__203_0: AttachmentUtility.GetAttachment, Thing.Destroy
+Source/Client/Syncing/Game/SyncMethods.cs:333  DEV SyncMethod BookOutcomeDoer_GiveQuest.GetGizmos[1]  // Give quest
+    -> <GetTopicRulePacks>d__18::<GetGizmos>b__17_1: =giveNext
+Source/Client/Syncing/Game/SyncMethods.cs:336      SyncMethod CompEggLayer.CompGetGizmosExtra[0]  // LayEgg
+    -> <CompGetGizmosExtra>d__20::<CompGetGizmosExtra>b__20_0: =eggProgress
+Source/Client/Syncing/Game/SyncMethods.cs:341  DEV SyncMethod WorldObject.GetGizmos[1]  // Generate map
+    -> <IncidentTargetTags>d__85::<GetGizmos>b__111_1: Action, "GeneratingMap", Exception>, LongEventHandler.QueueLongEvent
+Source/Client/Syncing/Game/SyncMethods.cs:342  DEV SyncMethod PsychicRitualToil_InvokeHorax.DebugFinishGizmo[0]  // 
+    -> <GetPawnGizmos>d__43::<DebugFinishGizmo>b__41_0: =hoursUntilOutcome
+Source/Client/Syncing/Game/SyncMethods.cs:345      SyncMethod CompTurretGun.CompGetGizmosExtra[1]  // Toggle fire at will
+    -> <SpecialDisplayStats>d__39::<CompGetGizmosExtra>b__37_1: =fireAtWill
+Source/Client/Syncing/Game/SyncMethods.cs:354      SyncMethod Building_GeneExtractor.GetGizmos[2]  // Cancel load
+    -> <GetGizmos>d__38::<GetGizmos>b__38_2: Thing.get_Position, Thing.get_Map, ThingOwner.TryDropAll, Pawn.get_CurJobDef, Pawn_JobTracker.EndCurrentJob, =selectedPawn, =startTick, =sustainerWorking
+Source/Client/Syncing/Game/SyncMethods.cs:358      SyncMethod Building_GrowthVat.GetGizmos[1]  // Cancel growth
+    -> <GetGizmos>d__86::<GetGizmos>b__86_1: Building_GrowthVat.Finish, Thing.get_InteractionCell, Thing.get_Map, ThingOwner.TryDropAll
+Source/Client/Syncing/Game/SyncMethods.cs:359      SyncMethod Building_GrowthVat.GetGizmos[6]  // Cancel load
+    -> <GetGizmos>d__86::<GetGizmos>b__86_6: Building_GrowthVat.DestroyEmbryo, Thing.get_InteractionCell, Thing.get_Map, ThingOwner.TryDropAll, ThingOwner.Contains, Building_GrowthVat.Notify_PawnRemoved, Pawn.get_CurJobDef, Pawn_JobTracker.EndCurrentJob
+Source/Client/Syncing/Game/SyncMethods.cs:361  DEV SyncMethod Building_GrowthVat.GetGizmos[3]  // Advance 1 year
+    -> <GetGizmos>d__86::<GetGizmos>b__86_3: Pawn_AgeTracker.Notify_TickedInGrowthVat
+Source/Client/Syncing/Game/SyncMethods.cs:362  DEV SyncMethod Building_GrowthVat.GetGizmos[4]  // Advance gestation 1 day
+    -> <GetGizmos>d__86::<GetGizmos>b__86_4: Mathf.Max, =startTick
+Source/Client/Syncing/Game/SyncMethods.cs:363  DEV SyncMethod Building_GrowthVat.GetGizmos[5]  // Embryo birth now
+    -> <GetGizmos>d__86::<GetGizmos>b__86_5: Find.get_TickManager, TickManager.get_TicksGame, =startTick, Building_GrowthVat.Finish
+Source/Client/Syncing/Game/SyncMethods.cs:364  DEV SyncMethod Building_GrowthVat.GetGizmos[11]  // Fill nutrition
+    -> <GetGizmos>d__86::<GetGizmos>b__86_11: =containedNutrition
+Source/Client/Syncing/Game/SyncMethods.cs:365  DEV SyncMethod Building_GrowthVat.GetGizmos[12]  // Empty nutrition
+    -> <GetGizmos>d__86::<GetGizmos>b__86_12: =containedNutrition
+Source/Client/Syncing/Game/SyncMethods.cs:369      SyncMethod Building_SubcoreScanner.GetGizmos[1]  // Initialize
+    -> <GetGizmos>d__45::<GetGizmos>b__45_1: =initScanner
+Source/Client/Syncing/Game/SyncMethods.cs:371  DEV SyncMethod Building_SubcoreScanner.GetGizmos[6]  // Enable/disable ingredients
+    -> <GetGizmos>d__45::<GetGizmos>b__45_6: =debugDisableNeedForIngredients
+Source/Client/Syncing/Game/SyncMethods.cs:372  DEV SyncMethod Building_SubcoreScanner.GetGizmos[7]  // Complete
+    -> <GetGizmos>d__45::<GetGizmos>b__45_7: =fabricationTicksLeft
+Source/Client/Syncing/Game/SyncMethods.cs:376  DEV SyncMethod Building_MechCharger.GetGizmos[0]  // Waste 100%
+    -> <SpecialDisplayStats>d__53::<GetGizmos>b__46_0: Building_MechCharger.get_WasteProducedPerChargingCycle, =wasteProduced
+Source/Client/Syncing/Game/SyncMethods.cs:377  DEV SyncMethod Building_MechCharger.GetGizmos[1]  // Waste 25%
+    -> <SpecialDisplayStats>d__53::<GetGizmos>b__46_1: Building_MechCharger.get_WasteProducedPerChargingCycle, =wasteProduced, Mathf.Clamp
+Source/Client/Syncing/Game/SyncMethods.cs:378  DEV SyncMethod Building_MechCharger.GetGizmos[2]  // Waste 0%
+    -> <SpecialDisplayStats>d__53::<GetGizmos>b__46_2: =wasteProduced
+Source/Client/Syncing/Game/SyncMethods.cs:380  DEV SyncMethod Building_MechCharger.GetGizmos[3]  // Charge 100%
+    -> <SpecialDisplayStats>d__53::<GetGizmos>b__46_3: Pawn_NeedsTracker.TryGetNeed, Need.set_CurLevelPercentage
+Source/Client/Syncing/Game/SyncMethods.cs:382  DEV SyncMethod Building_MechGestator.GetGizmos[0]  // Generate 5 waste
+    -> <GetGizmos>d__32::<GetGizmos>b__32_0: Building_MechGestator.get_WasteProducer, CompWasteProducer.ProduceWaste
+Source/Client/Syncing/Game/SyncMethods.cs:386  DEV SyncMethod CompMechCarrier.CompGetGizmosExtra[2]  // Fill
+    -> <CompGetGizmosExtra>d__25::<CompGetGizmosExtra>b__25_2: CompMechCarrier.get_Props, CompMechCarrier.get_IngredientCount, Mathf.Min, ThingMaker.MakeThing, =stackCount, ThingOwner.TryAdd
+Source/Client/Syncing/Game/SyncMethods.cs:387  DEV SyncMethod CompMechCarrier.CompGetGizmosExtra[3]  // Empty
+    -> <CompGetGizmosExtra>d__25::<CompGetGizmosExtra>b__25_3: ThingOwner.ClearAndDestroyContents
+Source/Client/Syncing/Game/SyncMethods.cs:388  DEV SyncMethod CompMechCarrier.CompGetGizmosExtra[4]  // Reset cooldown
+    -> <CompGetGizmosExtra>d__25::<CompGetGizmosExtra>b__25_4: =cooldownTicksRemaining
+Source/Client/Syncing/Game/SyncMethods.cs:390  DEV SyncMethod CompMechPowerCell.CompGetGizmosExtra[0]  // Power left 0%
+    -> <CompGetGizmosExtra>d__11::<CompGetGizmosExtra>b__11_0: =powerTicksLeft
+Source/Client/Syncing/Game/SyncMethods.cs:391  DEV SyncMethod CompMechPowerCell.CompGetGizmosExtra[1]  // Power left 100%
+    -> <CompGetGizmosExtra>d__11::<CompGetGizmosExtra>b__11_1: CompMechPowerCell.get_Props, =powerTicksLeft
+Source/Client/Syncing/Game/SyncMethods.cs:393      SyncMethod CompMechRepairable.CompGetGizmosExtra[1]  // Toggle auto repair
+    -> <CompGetGizmosExtra>d__3::<CompGetGizmosExtra>b__3_1: =autoRepair
+Source/Client/Syncing/Game/SyncMethods.cs:398  DEV SyncMethod CompMechRelay.CompGetGizmosExtra[0]  // Destabilize now
+    -> <CompGetGizmosExtra>d__12::<CompGetGizmosExtra>b__12_0: Find.get_TickManager, TickManager.get_TicksGame, =destabilizationTick
+Source/Client/Syncing/Game/SyncMethods.cs:401      SyncMethod CompAtomizer.CompGetGizmosExtra[1]  // Auto load
+    -> <CompGetGizmosExtra>d__22::<CompGetGizmosExtra>b__22_1: =autoLoad
+Source/Client/Syncing/Game/SyncMethods.cs:406      SyncMethod Genepack.GetGizmos[1]  // Auto load
+    -> <GetGizmos>d__18::<GetGizmos>b__18_1: =autoLoad
+Source/Client/Syncing/Game/SyncMethods.cs:410  DEV SyncMethod CompGenepackContainer.CompGetGizmosExtra[1]  // Fill with new packs
+    -> <CompGetGizmosExtra>d__27::<CompGetGizmosExtra>b__27_1: ThingOwner.ClearAndDestroyContents, ThingMaker.MakeThing, ThingOwner.TryAdd, CompGenepackContainer.get_Props
+Source/Client/Syncing/Game/SyncMethods.cs:414      SyncMethod Gene_Deathrest.GetGizmos[2]  // Auto wake
+    -> <SpecialDisplayStats>d__59::<GetGizmos>b__58_2: =autoWake
+Source/Client/Syncing/Game/SyncMethods.cs:415  DEV SyncMethod Gene_Deathrest.GetGizmos[3]  // Wake and apply bonuses
+    -> <SpecialDisplayStats>d__59::<GetGizmos>b__58_3: Gene_Deathrest.get_MinDeathrestTicks, =deathrestTicks, =adjustedDeathrestTicks, Gene_Deathrest.get_BoundComps, CompDeathrestBindable>.GetEnumerator, CompDeathrestBindable>.get_Current, =presenceTicks, CompDeathrestBindable>.MoveNext
+Source/Client/Syncing/Game/SyncMethods.cs:416  DEV SyncMethod Gene_Healing.GetGizmos[0]  // Heal permament wound
+    -> <GetGizmos>d__5::<GetGizmos>b__5_0: Gene.get_LabelCap, HediffComp_HealPermanentWounds.TryHealRandomPermanentWound, Gene_Healing.ResetInterval
+Source/Client/Syncing/Game/SyncMethods.cs:417  DEV SyncMethod Gene_PsychicBonding.GetGizmos[0]  // Bond to random pawn
+    -> <GetGizmos>d__8::<GetGizmos>b__8_0: Thing.get_Map, Thing.get_Faction, MapPawns.SpawnedPawnsInFaction, bool>, Enumerable.Where, GenCollection.TryRandomElement, Gene_PsychicBonding.BondTo
+Source/Client/Syncing/Game/SyncMethods.cs:433  DEV SyncMethod CompExplosive.CompGetGizmosExtra[0]  // Trigger countdown
+    -> <CompGetGizmosExtra>d__32::<CompGetGizmosExtra>b__32_0: =countdownTicksLeft
+Source/Client/Syncing/Game/SyncMethods.cs:436      SyncMethod Building_FirefoamPopper.GetGizmos[1]  // Toggle auto rebuild
+    -> <GetGizmos>d__6::<GetGizmos>b__6_1: =autoRebuild
+Source/Client/Syncing/Game/SyncMethods.cs:455  DEV SyncMethod Pawn_CreepJoinerTracker.GetGizmos[0]  // Unlock downside trigger
+    -> <GetGizmos>d__50::<GetGizmos>b__50_0: GenTicks.get_TicksGame, =canTriggerDownsideAfter
+Source/Client/Syncing/Game/SyncMethods.cs:461  DEV SyncMethod PitBurrow.GetGizmos[0]  // Spawn fleshbeast
+    -> <GetGizmos>d__14::<GetGizmos>b__14_0: Pawn>, =emergingFleshbeasts, FactionUtility.DefaultFactionFrom, PawnGenerator.GeneratePawn, Pawn>.Add, PitBurrow.FlushSpawnQueue
+Source/Client/Syncing/Game/SyncMethods.cs:463  DEV SyncMethod PitGate.GetGizmos[3]  // End cooldown
+    -> <GetGizmos>d__45::<GetGizmos>b__45_3: =lastIncidentTick
+Source/Client/Syncing/Game/SyncMethods.cs:468      SyncMethod Building_BioferriteHarvester.GetGizmos[1]  // Toggle unload
+    -> <GetGizmos>d__31::<GetGizmos>b__31_1: =unloadingEnabled
+Source/Client/Syncing/Game/SyncMethods.cs:469  DEV SyncMethod Building_BioferriteHarvester.GetGizmos[3]  // Dev add +1
+    -> <GetGizmos>d__31::<GetGizmos>b__31_3: Mathf.Min, =containedBioferrite
+Source/Client/Syncing/Game/SyncMethods.cs:475      SyncMethod Building_OutfitStand.GetGizmos[1]  // Order a pawn to equip from a stand
+    -> <GetGizmos>d__97::<GetGizmos>b__97_1: LocalTargetInfo.TryGetPawn, Pawn.get_Downed, "IsIncapped", Entity.get_LabelShort, op_Implicit, Messages.Message, ReservationUtility.CanReserveAndReach, Building_OutfitStand.SetAllowHauling
+Source/Client/Syncing/Game/SyncMethods.cs:481      SyncMethod Building_ArchonexusCore.GetMultiSelectFloatMenuOptions[0]  // Activate with selected pawns.
+    -> <GetMultiSelectFloatMenuOptions>d__7::<GetMultiSelectFloatMenuOptions>b__7_0: get_Item, op_Implicit, JobMaker.MakeJob, JobTag>, Pawn_JobTracker.TryTakeOrderedJob, IntVec3>.Clear, Thing.get_Position, Thing.get_InteractionCell
+Source/Client/Syncing/Game/SyncMethods.cs:501      SyncMethod Building_Crate.GetMultiSelectFloatMenuOptions[0]  // Activate with selected pawns.
+    -> <GetMultiSelectFloatMenuOptions>d__13::<GetMultiSelectFloatMenuOptions>b__13_0: get_Item, op_Implicit, JobMaker.MakeJob, JobTag>, Pawn_JobTracker.TryTakeOrderedJob, Thing.get_Position, RCellFinder.BestOrderedGotoDestNear, FloatMenuOptionProvider_DraftedMove.PawnGotoAction
