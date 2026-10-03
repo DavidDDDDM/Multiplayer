@@ -258,7 +258,7 @@ namespace Multiplayer.Client
             entry = entry.Down(30);
 
             // Arbiter
-            if (MpVersion.IsDebug) {
+            if (MpVersion.IsDebug || Prefs.DevMode) { // dawson: release builds show it in dev mode (testing)
                 TooltipHandler.TipRegion(entry.Width(CheckboxWidth), "MpArbiterDesc".Translate());
                 MpUI.CheckboxLabeled(entry.Width(CheckboxWidth), $"{"MpRunArbiter".Translate()}:  ", ref serverSettings.arbiter, order: ElementOrder.Right);
                 entry = entry.Down(30);
