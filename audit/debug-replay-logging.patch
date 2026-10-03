@@ -1,0 +1,24 @@
+diff --git a/Source/Client/Saving/SaveLoad.cs b/Source/Client/Saving/SaveLoad.cs
+index 857ff0b..5fffccd 100644
+--- a/Source/Client/Saving/SaveLoad.cs
++++ b/Source/Client/Saving/SaveLoad.cs
+@@ -34,6 +34,7 @@ namespace Multiplayer.Client
+ 
+         private static TempGameData SaveAndReloadCore(ReloadOptimizationMode optimizationMode)
+         {
++            Verse.Log.Message("DBGREPLAY SaveAndReload:\n" + System.Environment.StackTrace);
+             Multiplayer.reloading = true;
+ 
+             var tweenedPos = new Dictionary<int, Vector3>();
+diff --git a/Source/Client/UI/MainMenuPatches.cs b/Source/Client/UI/MainMenuPatches.cs
+index 246b66e..454e96a 100644
+--- a/Source/Client/UI/MainMenuPatches.cs
++++ b/Source/Client/UI/MainMenuPatches.cs
+@@ -204,6 +204,7 @@ namespace Multiplayer.Client
+ 
+         static void Prefix()
+         {
++            Verse.Log.Message("DBGREPLAY StopMultiplayer via quit/menu:\n" + System.Environment.StackTrace);
+             Multiplayer.StopMultiplayer();
+         }
+     }
