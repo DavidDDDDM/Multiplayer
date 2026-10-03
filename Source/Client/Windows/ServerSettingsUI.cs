@@ -116,7 +116,7 @@ public static class ServerSettingsUI
             placeTextNearCheckbox: true);
         entry = entry.Down(30);
 
-        if (MpVersion.IsDebug)
+        if (MpVersion.IsDebug || Prefs.DevMode) // dawson: release builds show it in dev mode (testing)
         {
             TooltipHandler.TipRegion(entry.Width(CheckboxWidth), "MpArbiterDesc".Translate());
             MpUI.CheckboxLabeled(entry.Width(CheckboxWidth), $"{"MpRunArbiter".Translate()}:  ", ref settings.arbiter,
