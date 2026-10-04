@@ -14,8 +14,9 @@ set "OUT=%USERPROFILE%\rw-mp-out"
 mkdir "%PROFILE%\Config" 2>nul
 mkdir "%PROFILE%\MpReplays" 2>nul
 mkdir "%OUT%" 2>nul
-del /q "%OUT%\friend" 2>nul
+del /q "%OUT%\friend" "%OUT%\friend2" 2>nul
 copy /y "%KIT%baseline-01.zip" "%PROFILE%\MpReplays\baseline-01.zip" >nul || ( echo baseline-01.zip is missing from the kit & pause & exit /b 1 )
+copy /y "%KIT%session-1004.zip" "%PROFILE%\MpReplays\session-1004.zip" >nul || ( echo session-1004.zip is missing from the kit & pause & exit /b 1 )
 (
 echo ^<?xml version="1.0" encoding="utf-8"?^>
 echo ^<ModsConfigData^>
@@ -33,11 +34,12 @@ echo.
 echo RimWorld will open and run by itself for a few minutes, then close on its own.
 echo DON'T click inside the game window while it runs.
 echo.
-"%GAME%" -savedatafolder="%PROFILE%" -logfile "%PROFILE%\Player.log" -username=Friend -replay=friend:baseline-01:60000:60 -replaydata="%OUT%"
-if exist "%OUT%\friend" (
+"%GAME%" -savedatafolder="%PROFILE%" -logfile "%PROFILE%\Player.log" -username=Friend -replay=friend:baseline-01:60000:60;friend2:session-1004:60000:60 -replaydata="%OUT%"
+if exist "%OUT%\friend2" (
   echo.
-  echo ===== DONE. Send Dawson the file "friend" from the folder that just opened: =====
+  echo ===== DONE. Send Dawson the files "friend" and "friend2" from the folder that just opened: =====
   type "%OUT%\friend"
+  type "%OUT%\friend2"
   explorer "%OUT%"
 ) else (
   echo.

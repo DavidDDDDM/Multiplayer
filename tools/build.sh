@@ -36,6 +36,8 @@ cp pinned/Preview.png "$OUT/About/Preview.png"                # upstream's is 4 
 sed -i "s|<name>Multiplayer</name>|<name>Multiplayer (Dawson pinned)</name>|" "$OUT/About/About.xml"
 sed -i "s|<description>|<description>Private pinned build of rwmt Multiplayer (MIT, github.com/DavidDDDDM/Multiplayer, ${FULL}) for playing with Dawson. UNSUBSCRIBE the official Multiplayer while using this one.\\n\\n|" "$OUT/About/About.xml"
 cp -r pinned/FriendTest "$OUT/"
-REPLAY="$HOME/rw-mp-test/MpReplays/baseline-01.zip"
-[[ -f "$REPLAY" ]] && cp "$REPLAY" "$OUT/FriendTest/" || echo "!! $REPLAY missing: FriendTest kit has no replay"
+for r in baseline-01 session-1004; do                          # private colonies: bundled from the local profile, never committed
+  REPLAY="$HOME/rw-mp-test/MpReplays/$r.zip"
+  [[ -f "$REPLAY" ]] && cp "$REPLAY" "$OUT/FriendTest/" || echo "!! $REPLAY missing: FriendTest kit is incomplete"
+done
 echo "Built Multiplayer $FULL -> $OUT"

@@ -10,6 +10,6 @@ THE TEST:
     ...\steamapps\workshop\content\294100\<this item's number>\FriendTest\).
  5. Double-click run_replay.bat (if it shows as run_replay.txt, rename it to .bat first).
  6. RimWorld opens with a separate test profile, runs by itself, and closes. Don't click in it.
- 7. A folder opens with a file named "friend". Send that file to Dawson. Done.
+ 7. A folder opens with files named "friend" and "friend2". Send both to Dawson. Done.
 
 Your normal saves and mod list are not changed (the test uses %USERPROFILE%\rw-mp-test).
