@@ -29,4 +29,12 @@ XML
 sed -i "s|<modVersion>.*</modVersion>.*\$|<modVersion>${FULL}</modVersion>|" "$OUT/About/About.xml"
 cp -r Assemblies AssembliesCustom Defs Languages "$OUT/1.6/"
 rm -f "$OUT/1.6/Languages/.git" "$OUT/1.6/Languages/LICENSE" "$OUT/1.6/Languages/README.md"
+# Pinned overlay (see pinned/README.md): our Friends-only Workshop identity + the friend's T4 kit
+rm -f "$OUT/About/PublishedFileId.txt"                       # upstream's = the OFFICIAL rwmt Workshop item
+[[ -f pinned/PublishedFileId.txt ]] && cp pinned/PublishedFileId.txt "$OUT/About/"
+sed -i "s|<name>Multiplayer</name>|<name>Multiplayer (Dawson pinned)</name>|" "$OUT/About/About.xml"
+sed -i "s|<description>|<description>Private pinned build of rwmt Multiplayer (MIT, github.com/DavidDDDDM/Multiplayer, ${FULL}) for playing with Dawson. UNSUBSCRIBE the official Multiplayer while using this one.\\n\\n|" "$OUT/About/About.xml"
+cp -r pinned/FriendTest "$OUT/"
+REPLAY="$HOME/rw-mp-test/MpReplays/baseline-01.zip"
+[[ -f "$REPLAY" ]] && cp "$REPLAY" "$OUT/FriendTest/" || echo "!! $REPLAY missing: FriendTest kit has no replay"
 echo "Built Multiplayer $FULL -> $OUT"
